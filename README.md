@@ -1,12 +1,15 @@
-# bondline
-
-<img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/icon.png" alt="" width="120" align="right">
+# <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/icon.png" alt="" width="40" align="top"> bondline
 
 A natural-language chemistry engine for Claude.
 
 bondline lets Claude draw clean, consistent chemistry figures from a plain description: structures, curly-arrow mechanisms, reaction schemes and catalytic cycles. Every figure is checked before it's shown, including valences, charges, stereochemistry and the electron flow in mechanisms.
 
-![Morphine, strychnine, reserpine, quinine, penicillin G and cholesterol](https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/structures.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/structures-dark.png">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/structures.png" alt="Morphine, strychnine, reserpine, quinine, penicillin G and cholesterol" width="93%">
+  </picture>
+</p>
 
 ## Features
 
@@ -29,17 +32,32 @@ Once it's installed, ask Claude for the figure you want, e.g.
 
 ## Examples
 
-Takasago synthesis of (−)-menthol:
+### Takasago synthesis of (−)-menthol
 
-![Takasago synthesis of (−)-menthol](https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/synthesis.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/synthesis-dark.png">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/synthesis.png" alt="Takasago synthesis of (−)-menthol" width="92%">
+  </picture>
+</p>
 
-Robinson annulation to the Wieland–Miescher ketone:
+### Robinson annulation to the Wieland–Miescher ketone
 
-![Robinson annulation mechanism](https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/mechanism.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/mechanism-dark.png">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/mechanism.png" alt="Robinson annulation mechanism" width="100%">
+  </picture>
+</p>
 
-Suzuki coupling:
+### Suzuki coupling
 
-<img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle.png" alt="Suzuki coupling catalytic cycle" width="420">
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle-dark.png">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle.png" alt="Suzuki coupling catalytic cycle" width="44%">
+  </picture>
+</p>
 
 The scripts for these are in [docs/showcase](https://github.com/montybwolfe/bondline/tree/main/docs/showcase).
 
