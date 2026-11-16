@@ -1,0 +1,28 @@
+== SN1 ionisation
+validate: OK
+(np.float64(154.89669890082192), np.float64(43.778125))
+check:
+  Atom(C:c) sits 1.00 BU from Atom(Br:br) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+  the three bonds at Atom(C:c) make a T (90, 90, 180 deg): draw a three-bond centre with its bonds 120 deg apart (release() redraws a centre it leaves like this)
+== Grignard addition
+validate: OK
+(np.float64(153.6253191274376), np.float64(75.17820312500001))
+check:
+  mol1: bond Atom(C:Cg)-Atom(C:c) length 1.70 BU: to connect two fragments use join(), which lays the new bond out at 1 BU (flag free=True if intended)
+  Atom(C:Cg) sits 1.00 BU from Atom(MgBr:Mg) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+== radical abstraction
+validate: OK
+(np.float64(197.5088078417657), np.float64(52.3196875))
+check:
+  mol1: bond Atom(H:H)-Atom(Br:Br) length 2.20 BU: to connect two fragments use join(), which lays the new bond out at 1 BU (flag free=True if intended)
+  Atom(C:C) sits 1.00 BU from Atom(H:H) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+== allyl resonance
+validate: OK
+(np.float64(134.61621779717692), np.float64(26.761882352103544))
+check: OK
+== SN2 transition state
+(np.float64(75.4158270661835), np.float64(46.99468750000001))
+check:
+  labels overlap: Atom(H) / Atom(Br)
+  labels of Atom(H) and Atom(Br) are cramped (< 1.5 pt apart)
+  bonds at Atom(C) only 30 deg apart

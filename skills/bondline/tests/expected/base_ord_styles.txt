@@ -1,0 +1,7 @@
+== acs preset
+stereo: Atom(C:4)=S
+(np.float64(70.64987169798496), np.float64(94.74634974541769))
+check: OK
+== bond styles
+(np.float64(234.4307214029429), np.float64(18.204530800862813))
+check: OK

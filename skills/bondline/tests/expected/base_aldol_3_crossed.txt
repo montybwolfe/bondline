@@ -1,0 +1,9 @@
+validate: OK
+validate: OK
+validate: OK
+(np.float64(489.6694437004056), np.float64(143.93240661752105))
+check: OK
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:Ob) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+  explicit H on Atom(O:O1b) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+  explicit H on Atom(O) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose

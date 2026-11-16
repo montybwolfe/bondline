@@ -1,0 +1,12 @@
+== chains and labels
+(np.float64(151.55032266485406), np.float64(64.00953125000001))
+check: OK
+== rings
+(np.float64(131.59900591150236), np.float64(48.65229021766183))
+check: OK
+== fused and substituted rings
+(np.float64(147.97735385463733), np.float64(74.97968750000001))
+check: OK
+== spiro and bridged
+(np.float64(60.14440676377042), np.float64(34.04153162899185))
+check: OK

@@ -1,0 +1,18 @@
+== marks: charges, radicals, lone pairs, partial charges, numbers
+(np.float64(361.9510162084259), np.float64(55.03332385121414))
+check: OK
+== bonds
+(np.float64(459.6324314645399), np.float64(47.7953125))
+check: OK
+== labels
+(np.float64(439.2098519673766), np.float64(47.9208755119655))
+check: OK
+== reaction arrows and text
+(np.float64(425.8973607750367), np.float64(56.54788147324057))
+check: OK
+== curly arrows of every class
+(np.float64(130.28135915792097), np.float64(58.28125))
+check: OK
+== brackets, TS, resonance
+(np.float64(75.4158270661835), np.float64(52.265453314495915))
+check: OK

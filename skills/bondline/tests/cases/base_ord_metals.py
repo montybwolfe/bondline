@@ -1,0 +1,17 @@
+# Metal geometries, eta bonds, chelates, dative bonds
+from bondline import *
+st = Style()
+print("== geometries")
+S = Scene(st)
+oc = Mol(); M = oc.atom("Fe", (0, 0)); oc.ligate(M, "oct", up="CO", down="CO", fl="CO", fr="CO", bl="CO", br="CO")
+tb = Mol(); M = tb.atom("Fe", (0, 0)); tb.ligate(M, "tbp", up="CO", down="CO", left="CO", fr="CO", br="CO")
+tt = Mol(); M = tt.atom("Ni", (0, 0)); tt.ligate(M, "tet", up="CO", left="CO", fr="CO", br="CO")
+S.row([oc, tb, tt]); print(S.save("geoms.png")); S.check()
+print("== eta and chelate")
+S = Scene(st)
+fc = Mol(); M = fc.atom("Fe", (0, 0)); r = fc.ring(5, center=(0, 1.75), rot=90); fc.bond(r[0], r[1], 2); fc.bond(r[2], r[3], 2)
+fc.eta(M, r); M2 = fc.ligate(M, "sqpl", S="CO")
+ch = Mol(); P = ch.atom("Pd", (0, 0)); p1 = ch.attach(P, 135, "P", length=1.3, free=True); p2 = ch.attach(P, 45, "P", length=1.3, free=True)
+ch.bridge(p1, p2, 2, away=P); ch.ligate(P, "sqplx", SW="Cl", SE="Cl")
+dv = Mol(); n = dv.atom("N", (0, 0)); [dv.attach(n, t, "Me") for t in (90, 180, 270)]; b = dv.attach(n, 0, "BF3", style="dative")
+S.row([fc, ch, dv]); print(S.save("eta.png")); S.check()

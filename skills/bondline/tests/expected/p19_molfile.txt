@@ -1,0 +1,11 @@
+== round trip
+  C[C@H](N)C(=O)O: atoms 6->6, layout True, wedges kept True, CIP kept True [(1, 'S')]
+  O=C(OC)c1ccc([C@@H](O)CC)cc1: atoms 14->14, layout True, wedges kept True, CIP kept True [(8, 'S')]
+  C[C@@H]1CC[C@H](O)CC1: atoms 8->8, layout True, wedges kept True, CIP kept True [(1, 's'), (4, 's')]
+== abbreviations out and back
+  drawn out: C11H14O3 = formula(): C11H14O3
+  as aliases and back: ['C', 'OMe', 'Ph', 'CO2Et']
+== contracted superatoms (SUP) from a drawing program
+  V2000 ['OMe', 'O', 'O', 'tBu'] 11 atoms; drawn out: 15
+  V3000 ['OMe', 'O', 'O', 'tBu'] 11 atoms; drawn out: 15
+check: OK

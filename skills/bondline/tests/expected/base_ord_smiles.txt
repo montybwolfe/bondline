@@ -1,0 +1,3 @@
+stereo: Atom(C:3)=S, Atom(C:6)=R, Atom(C:9)=R
+(np.float64(222.23008815691253), np.float64(81.7464242385953))
+check: OK

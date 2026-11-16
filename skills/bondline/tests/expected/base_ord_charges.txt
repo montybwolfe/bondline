@@ -1,0 +1,11 @@
+== ions
+(np.float64(181.45712414306612), np.float64(39.6724609375))
+check:
+  labels of Atom(Me) and Atom(H) are cramped (< 1.5 pt apart)
+  bonds at Atom(N) only 30 deg apart
+== radicals and marks
+(np.float64(151.89467287777745), np.float64(55.03332385121414))
+check: OK
+== plain charges and hetero colours
+(np.float64(107.04802385959377), np.float64(47.840625))
+check: OK

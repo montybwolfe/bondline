@@ -1,0 +1,82 @@
+CS(=O)(=O)OC[C@H](C)N abbrev=auto: S (RDKit S) ['OMs', 'NH2']
+CS(=O)(=O)OC[C@H](C)N abbrev=True: S (RDKit S) ['OMs', 'NH2']
+CS(=O)(=O)OC[C@H](C)N abbrev=False: S (RDKit S) ['NH2']
+C[Si](C)(C)OC[C@H](C)N abbrev=auto: S (RDKit S) ['OSiMe3', 'NH2']
+C[Si](C)(C)OC[C@H](C)N abbrev=True: S (RDKit S) ['OSiMe3', 'NH2']
+C[Si](C)(C)OC[C@H](C)N abbrev=False: S (RDKit S) ['NH2']
+C[C@H](O[Si](C)(C)C(C)(C)C)CO abbrev=auto: S (RDKit S) ['OTBS']
+C[C@H](O[Si](C)(C)C(C)(C)C)CO abbrev=True: S (RDKit S) ['OTBS']
+C[C@H](O[Si](C)(C)C(C)(C)C)CO abbrev=False: S (RDKit S) []
+OC[C@@H](C)C(=O)OCc1ccccc1 abbrev=auto: R (RDKit R) []
+OC[C@@H](C)C(=O)OCc1ccccc1 abbrev=True: R (RDKit R) ['CO2Bn']
+OC[C@@H](C)C(=O)OCc1ccccc1 abbrev=False: R (RDKit R) []
+stereo: Atom(C)=S (label 'OTr' not read as atoms: check descriptors near it by hand)
+stereo: no stereocentres; Atom(C:1)=Atom(C:2):E
+stereo: Atom(C:1)=S
+stereo: Atom(C:1)=? (? depends on what the R or X group stands for)
+stereo: Atom(C:1)=? (? depends on what the R or X group stands for)
+stereo: Atom(C:1)=S
+{'OTIPS': 'C9H21OSi', 'OTBDPS': 'C16H19OSi', 'Bpin': 'C6H12BO2', 'ONf': 'C4F9O3S', 'OMOM': 'C2H5O2', 'OTHP': 'C5H9O2'}
+(np.float64(162.19195296021803), np.float64(34.580287530313974))
+check: OK
+(np.float64(191.3378611001985), np.float64(32.94119817183433))
+check: OK
+C drawn: [[2], [3], [2]] sides: [[0, 0], [0, 0], [-1, -1]]
+ValueError: from_smiles labels: no atom 9 (atom indices follow the SMILES string from 0; this one has 7 atoms, 0-6)
+ValueError: from_smiles align: atom 2 is part of an abbreviation here (OtBu); name a drawn atom, or pass abbrev=False
+ValueError: from_smiles xy: RDKit cannot lay the molecule out around these pins; check the indices (they follow the SMILES string fr
+['Me', 'C', 'Me', 'Me', 'OEt']
+(np.float64(105.05291422573141), np.float64(29.556621798212277))
+check: OK
+broken: [(3, 4, [2.9])] dashed pieces: []
+broken: [(0, 1, [2.9])] dashed pieces: []
+broken: [(3, 4, [2.9])] dashed pieces: [2]
+[['Z'], ['E'], ['E', 'Z']]
+check: OK
+['hash', 'hash', 'wedge', 'wedge'] SS SS
+check: OK
+['hash', 'hash', 'wedge', 'wedge'] SR SR
+(np.float64(292.37457068239524), np.float64(73.43164442099689))
+check: OK
+[2, 2, 2]
+(np.float64(346.6892945225229), np.float64(58.286661458657875))
+check: OK
+[210, 330] [30, 150] [75, 195] [165, 285] [90, 210]
+CC(C)(C)c1ccc(C(C)=O)cc1 ['tBu', 'Ac'] ['Ac', 'tBu']
+COc1ccccc1OCOC True ['OMOM', 'OMe']
+CN1CCC(CC1)C(=O)OC ['NMe', 'CO2Me'] ['CO2Me', 'NMe']
+CCCC1CCCCC1 ['Et'] []
+CCc1ccccc1 ['Et'] ['Et']
+(np.float64(271.41572421380846), np.float64(55.37780400547372))
+check: OK
+formula NMe ring: C8H15NO2
+check:
+  labels of Atom(OH:0) and Atom(Cl:4) run together on one line (1.9 pt apart): they read as one; turn one of the groups, or move the atoms apart
+check: OK
+(np.float64(133.5490707372375), np.float64(52.68687500000001))
+check: OK
+check:
+  bond Atom(C:22)-Atom(C:24) runs into label Atom(OTBS:13)
+check:
+  Atom(C:0) lies on bond Atom(C:3)-Atom(C:4) (0.00 BU from it): move one of them
+  bonds at Atom(C:1) only 46 deg apart
+  substituent Atom(C:0) on ring atom Atom(C:1) is 166 deg off the exterior bisector
+check:
+  Atom(N) has two double bonds: an sp centre is straight (180 deg), drawn at 120 deg; turn one side through to 180 (swing())
+check: OK
+vinyl end: same same | CF3 offset: [(2.6, -0.5), (2.6, -0.5)]
+like= bridged product bonds: 1.00-1.00 BU
+(np.float64(68.51315825106047), np.float64(42.97242497634991))
+check: OK
+OH at 237 deg; bonds at [30, 162, 288]
+CCC/C=C/[C@H]1CC[C@@H](O)[C@@H]1C ['E'] RRR
+CCC/C=C\[C@H]1CC[C@@H](O)[C@@H]1C ['Z'] RRR
+(np.float64(153.52443192844592), np.float64(62.541123452633315))
+check: OK
+[('Cl', 2.0)]
+[('O', 2.0)]
+[('C', 'plain'), ('OH', 'wedge'), ('C', 'plain')] S
+[('C', 'plain'), ('C', 'plain'), ('OTBS', 'wedge')] S
+check: OK
+check:
+  mol0: bond Atom(C:2)-Atom(C:3) length 1.30 BU: RDKit's layout of a crowded centre stretched it; pin the atoms round it with xy= (flag free=True if intended)

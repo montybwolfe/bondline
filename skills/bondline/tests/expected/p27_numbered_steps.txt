@@ -1,0 +1,15 @@
+== numbered reference drawings
+(np.float64(99.33518495795131), np.float64(69.40210510121413))
+check: OK
+(np.float64(110.25004114041442), np.float64(49.51949312953399))
+check: OK
+== the user's steps: lp on 7 -> 6; bond 1-6 -> 1-2; bond 2-3 -> 3
+atoms 1-7 found in the second step: True B H
+validate: OK
+balance: OK
+(np.float64(191.9581886369755), np.float64(79.7828125))
+check: OK
+num(42): 'no atom numbered 42 here (numbered() first; merged reagents keep their own numbers)'
+== side_by_side: an original beside the redraw, one height, optional crop
+300 px high
+300 px high (cropped)

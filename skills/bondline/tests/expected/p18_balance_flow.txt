@@ -1,0 +1,28 @@
+== formulas
+  ethanol: C2H6O (+0)
+  acetate: C2H3O2 (-1)
+  benzene: C6H6 (+0)
+  ferrocene: C10H10Fe
+  Cp-: C5H5 (-1)
+  Et3N: C6H15N
+  iPr2NEt: C8H19N
+  PPh3: C18H15P
+  LiAlH4: AlH4Li
+  tBuOK: C4H9KO
+  NHBoc: C5H10NO2
+  Pd(PPh3)4: C72H60P4Pd
+  HBr: HBr
+  NH3: NH3
+  LDA: LDA
+== balance
+balance: lost H2O
+  {'lost': 'H2O', 'gained': '', 'charge': (0, 0)}
+balance: lost H2O (no arrow mentions it)
+balance: lost HBr (no arrow mentions it)
+balance: gained H2O (no arrow mentions it)
+== flow: a lone trailing item stays on the row by closing the gaps a little
+  without squeeze: [5, 2]
+  with squeeze: [7]
+== flow: a continuation that must start with an arrow lines up under the first arrow above
+  rows: [7, 4] first arrow x per row: [np.float64(36.96), np.float64(36.96)]
+check: OK

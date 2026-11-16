@@ -1,0 +1,63 @@
+NC             stored CN               typed leftwards  units ['C', 'N']
+FG             stored FG                 units ['FG']
+EWG            stored EWG                units ['EWG']
+Nuc            stored Nuc                units ['Nuc']
+Ln             stored Ln                 units ['Ln']
+Bpin           stored Bpin               units ['B', 'pin']
+NPhth          stored NPhth              units ['N', 'Phth']
+(PPh3)4Pd^0    stored Pd^0(PPh3)4      typed leftwards  units ['Pd^0', '(PPh3)4']
+L2(Ph)Pd^{II}  stored Pd^{II}(Ph)L2    typed leftwards  units ['Pd^{II}', '(Ph)', 'L2']
+L_nNi^{II}     stored Ni^{II}L_n       typed leftwards  units ['Ni^{II}', 'L_n']
+PdII(Ph)L2     stored PdII(Ph)L2         units ['Pd^{II}', '(Ph)', 'L2']
+LnPdX          stored PdXLn            pivot 1  units ['Pd', 'X', 'Ln']
+EtOH           stored OHEt             pivot 1  units ['O', 'H', 'Et']
+iPr2NEt        stored NEtiPr2          pivot 1  units ['N', 'Et', 'iPr2']
+NiPr2          stored NiPr2              units ['N', 'iPr2']
+PtBu3          stored PtBu3              units ['P', 'tBu3']
+SnBu3          stored SnBu3              units ['Sn', 'Bu3']
+PF6            stored PF6                units ['P', 'F6']
+(CH2)11CH3     stored (CH2)11CH3         units ['(CH2)11', 'CH3']
+(np.float64(537.8425394594132), np.float64(51.11285204017794))
+check: OK
+NC on the right: NC | NC on the left: CN
+NC                 ink   2.8 pt left of the atom,  10.5 pt right
+NC                 ink  10.0 pt left of the atom,   3.2 pt right
+L_2(Ph)Pd^II       ink  33.6 pt left of the atom,   9.4 pt right
+L_nNi^II           ink  13.4 pt left of the atom,   8.0 pt right
+[M]                ink   1.1 pt left of the atom,  12.8 pt right
+FG                 ink   9.2 pt left of the atom,   3.1 pt right
+Nuc                ink   2.8 pt left of the atom,  13.9 pt right
+EtOH               ink  12.5 pt left of the atom,  10.3 pt right
+`iPr_2NEt          ink  18.9 pt left of the atom,  13.0 pt right
+PF_6               ink   2.5 pt left of the atom,  13.0 pt right
+== text: formulas beside markup, tags, glued charges and radicals, unicode signs, pKa', hyphens, adducts, colour
+  H3O⊕                   H_{3}O^{⊕}
+  H3O^+                  H_{3}O^+
+  N3- I3- Fe3+           N_{3}^{−} I_{3}^{−} Fe^{3+}
+  NMe3⁺ N3⁻              NMe_{3}^{+} N_{3}^{−}
+  R2CH•                  R_{2}CH•
+  <i>−CO2</i>            <i>−CO_{2}</i>
+  <b>Ru(bpy)3.Cl2</b>    <b>Ru(bpy)_{3}.Cl_{2}</b>
+  pKa' (K2CO3)           p<i>K</i>_{a}′ (K_{2}CO_{3})
+  PdCl2[P(o-tolyl)3]2    PdCl_{2}[P(<i>o</i>-tolyl)_{3}]_{2}
+  NaOt-Bu                NaO<i>t</i>-Bu
+  LnPd(0)                L_{n}Pd(0)
+  MgSO4.7H2O             MgSO_{4}.7H_{2}O
+  colours: [('Ligand', '#E8261A'), (', Base', None)]
+(np.float64(187.6984675187591), np.float64(117.6296590012694))
+check: OK
+== check(): partial bonds of a transition state, H-bonds, oniums, X as a heteroatom, attach(length=), formula ions
+(np.float64(520.6444824173224), np.float64(56.08144086552521))
+check: OK
+  C6H13 on the left of its bond: C_6H_13
+check:
+  Atom(OMe) is labelled OMe but has 2 bonds: a one-bond group on the wrong atom?
+  Atom(NH2) is labelled NH2 but has 2 bonds: a one-bond group on the wrong atom?
+  bond angle at Atom(OMe) is 90 deg (use 120 or 180)
+  valence: Atom(OMe) uses 3, expected 2 (charge +0)
+  valence: Atom(NH2) uses 4, expected 3 (charge +0)
+== bonds between labels show at least 6 pt (a terminal label slides out); a level bond starts beyond a superscript
+(np.float64(375.9437356111295), np.float64(52.90093750000001))
+check: OK
+  H-Cl 6.0 pt; Pd-H 6.0; Ni(III)-Ar 6.0; C-R2 hash 1.28 BU, C-R1 wedge 1.28 BU; Pd-Cl 1.30 BU
+  Ni(II)-Br starts 0.4 pt beyond the superscript; locant clear of it: True

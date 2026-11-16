@@ -1,0 +1,25 @@
+(np.float64(224.6913445079837), np.float64(51.2523040461086))
+check: OK
+arrow len pt 37.440000000000005 text widths [np.float64(136.90828125000002), np.float64(69.11078125)]
+captioned mol centre y 4.440892098500626e-16 arrow y 0.0 uncaptioned mol centre y 4.440892098500626e-16
+E2
+  #0 class=inter sweep=65 shaft=0.98 BU head=0.40 BU ok=True
+  #1 class=adj sweep=120 shaft=0.80 BU head=0.40 BU ok=True
+  #2 class=hook sweep=170 shaft=1.29 BU head=0.40 BU ok=True
+mid22 (np.float64(87.85331743497365), np.float64(36.06727163203543))
+  check issues: ['bond angle at Atom(C) is 60 deg (use 120 or 180)']
+  #0 class=lpadj sweep=174 shaft=0.82 BU head=0.40 BU ok=True
+  #1 class=inter sweep=81 shaft=2.27 BU head=0.40 BU ok=True
+  #2 class=hook sweep=190 shaft=1.50 BU head=0.40 BU ok=True
+atom22 (np.float64(87.85331743497365), np.float64(36.06727163203543))
+  check issues: ['bond angle at Atom(C) is 60 deg (use 120 or 180)']
+  #0 class=lpadj sweep=174 shaft=0.82 BU head=0.40 BU ok=True
+  #1 class=inter sweep=81 shaft=2.27 BU head=0.40 BU ok=True
+  #2 class=hook sweep=190 shaft=1.50 BU head=0.40 BU ok=True
+atom16 (np.float64(81.72922442001577), np.float64(32.36027970644959))
+  check issues: ['bond angle at Atom(C) is 60 deg (use 120 or 180)']
+  #0 class=lpadj sweep=175 shaft=0.88 BU head=0.40 BU ok=True
+  #1 class=inter sweep=88 shaft=1.50 BU head=0.40 BU ok=True
+  #2 class=hook sweep=190 shaft=1.50 BU head=0.40 BU ok=True
+deterministic: True
+font used: Liberation Sans

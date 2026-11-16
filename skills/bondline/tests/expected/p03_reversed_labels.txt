@@ -1,0 +1,29 @@
+== substituents typed reversed, bonds from either side
+HO     -> OH
+H2N    -> NH2
+H3C    -> CH3
+MeO    -> OMe
+EtO    -> OEt
+AcO    -> OAc
+TsO    -> OTs
+F3C    -> CF3
+Me2N   -> NMe2
+BocHN  -> NHBoc
+TBSO   -> OTBS
+check: OK
+check: OK
+== lone species: charges, lone pairs and radicals on the heteroatom or carbon
+(np.float64(165.44609191738667), np.float64(24.586906238502053))
+check: OK
+Atom(OH) anchor O
+Atom(OEt) anchor O
+Atom(CH3) anchor C
+Atom(MgBr) anchor Mg
+Atom(OH2) anchor O
+== negative: a label that still anchors on H; valence read from substituents in labels
+check:
+  Atom(OEt) is labelled OEt but has 2 bonds: a one-bond group on the wrong atom?
+  Atom(NMe2) is labelled NMe2 but has 2 bonds: a one-bond group on the wrong atom?
+  bond angle at Atom(OEt) is 150 deg (use 120 or 180)
+  valence: Atom(OEt) uses 3, expected 2 (charge +0)
+  valence: Atom(NMe2) uses 4, expected 3 (charge +0)

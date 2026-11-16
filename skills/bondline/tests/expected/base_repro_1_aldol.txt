@@ -1,0 +1,14 @@
+(np.float64(239.74510994348773), np.float64(49.5775))
+check: OK
+validate: OK
+validate: OK
+continuity: OK
+(np.float64(301.4103757809252), np.float64(68.3602797064496))
+check:
+  mol2: bond Atom(C:Ca)-Atom(C:Ec) length 1.70 BU: to connect two fragments use join(), which lays the new bond out at 1 BU (flag free=True if intended)
+  bond angle at Atom(C:Ec) is 60 deg (use 120 or 180)
+  bond angle at Atom(C:Ca) is 150 deg (use 120 or 180)
+  the three bonds at Atom(C:Ec) are spread unevenly (60, 90, 210 deg): draw a three-bond centre with its bonds 120 deg apart (release() redraws a centre it leaves like this)
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:Ob) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+timing: ok

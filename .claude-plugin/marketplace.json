@@ -1,0 +1,15 @@
+{
+  "name": "bondline",
+  "description": "A natural-language chemistry engine for Claude",
+  "owner": {
+    "name": "Monty Wolfe",
+    "url": "https://github.com/montybwolfe"
+  },
+  "plugins": [
+    {
+      "name": "bondline",
+      "source": "./",
+      "description": "A natural-language chemistry engine for Claude: structures, curly-arrow mechanisms, reaction schemes and catalytic cycles, checked before they're drawn."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+== Mid across 2.2 BU: aimed at the carbonyl carbon
+validate: OK
+continuity: OK
+(np.float64(195.64497833490782), np.float64(42.51221801495788))
+check: OK
+== concerted pair (radical recombination) still meets nose to nose
+validate: OK
+(np.float64(173.92781250000004), np.float64(39.919656628991845))
+check: OK
+== SN2 with join and release: product on standard angles, bromide as its own item
+validate: OK
+continuity: OK
+(np.float64(178.26679340880554), np.float64(43.778125))
+check: OK
+== SN1 with release: the carbocation left as a T is redrawn as a Y (one bond kept, the others turned least)
+cation bonds at [60, 180, 300]
+validate: OK
+continuity: OK
+(np.float64(184.34310515082188), np.float64(43.778125))
+check: OK
+== negative: a leaving group left where it was, a stray by-product, and a head pointing at nothing
+check:
+  curly #0 (LP(Atom(O), 130.0) -> (3.0, 3.0)): ends 2.37 BU from the nearest atom or bond (points at nothing)
+  Atom(C) sits 1.00 BU from Atom(Br) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+  stray species: Atom(C) lies 3.6 BU from the rest of its molecule with no arrow (split() it off as its own item)
+  stray species: Atom(O) lies 3.6 BU from the rest of its molecule with no arrow (split() it off as its own item)
+  the three bonds at Atom(C) make a T (90, 90, 180 deg): draw a three-bond centre with its bonds 120 deg apart (release() redraws a centre it leaves like this)
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose

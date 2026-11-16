@@ -1,0 +1,29 @@
+== enolisation of an isopropyl ketone by B:⁻ (alpha-H placed by attach(), base by deprotonate())
+H at 300 deg, Me at 240 deg
+validate: OK
+balance: OK
+(np.float64(182.72653127294151), np.float64(75.92653880119768))
+check: OK
+== lone ions: spare pairs on the axes, a one-unit label's charge after it, a radical by its atom
+(np.float64(271.5386569249842), np.float64(24.73123146066941))
+check: OK
+== a gem pair on a chain vertex, either order; OH then Me on a zigzag
+(np.float64(125.48542244348775), np.float64(31.31217206449592))
+check: OK
+== lithium enolate formation through a cyclic arrangement: O...Li and N...H dotted, no valence complaint
+(np.float64(71.11073494348777), np.float64(58.10422225569357))
+check: OK
+== negative: superscripts under an arrow, spaced from the cap height (the old way), are reported
+check:
+  arrow text '[Ru(bpy)3]2+, NH4+, PF6−' comes within 1.1 pt of its arrow
+== reversed condensed labels anchored on carbon or nitrogen (typed with the bond on the right)
+R2CH   -> CHR2
+R2C    -> CR2
+EtO2C  -> CO2Et
+HO2C   -> CO2H
+O2N    -> NO2
+PhCH2  -> CH2Ph
+HOCH2  -> CH2OH
+NC     -> CN
+(np.float64(571.009613196057), np.float64(47.897764889957884))
+check: OK

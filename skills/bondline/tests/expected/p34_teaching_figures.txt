@@ -1,0 +1,18 @@
+(np.float64(99.54871216653451), np.float64(59.97615437693631))
+check: OK
+structure boxes hold their lobes (captions go below them): True
+(np.float64(100.1010092985874), np.float64(81.93894492225505))
+check: OK
+tidy: ['C', 'C', 'C', 'CH3']
+(np.float64(321.69568263647926), np.float64(38.044063709933056))
+check: OK
+labels: ['YH', 'NuH', 'XH']
+(np.float64(192.51238281250002), np.float64(77.27937500000002))
+check: OK
+cycle radius: 3 texts: 3
+(np.float64(97.27096634568113), np.float64(101.44589417126839))
+check: OK
+(np.float64(152.89067500000002), np.float64(31.129307812500002))
+check: OK
+(np.float64(158.3681264212013), np.float64(44.2575625))
+check: OK

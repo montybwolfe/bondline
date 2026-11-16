@@ -1,0 +1,8 @@
+{
+ "python": "3.13.18",
+ "matplotlib": "3.11.2",
+ "numpy": "2.5.3",
+ "freetype": "2.14.3",
+ "font": "LiberationSans-Regular.ttf",
+ "font_sha": "4659bc0c58c5028d"
+}

@@ -1,0 +1,31 @@
+== two wedges in a row: the first's wide end runs on into the second's edges
+(np.float64(57.88233162899183), np.float64(44.0))
+check: OK
+notes (deliberate near reacting centres? confirm):
+  wedge Atom(C)-Atom(C) joins two stereocentres (IUPAC prefers wedges on exocyclic bonds)
+first wedge's wide end joined to the second (outline points): 5 (a square end has 4)
+== a centred C=O: the single bonds stop at its near lines, meeting them in a corner
+(np.float64(89.99535362757568), np.float64(36.725672165193146))
+check: OK
+Atom(C:1) - Atom(C:0) stops 1.58 pt short of the carbon; a C=O line ends there: True
+Atom(C:1) - Atom(OH:3) stops 1.58 pt short of the carbon; a C=O line ends there: True
+Atom(C:1) - Atom(C:0) stops 1.58 pt short of the carbon; a C=O line ends there: True
+Atom(C:1) - Atom(C:2) stops 1.58 pt short of the carbon; a C=O line ends there: True
+== lobes on a labelled atom show from just off the letter
+(np.float64(45.85592206449592), np.float64(38.29970649785184))
+check: OK
+lobe outline's end to the N's ink: 0.37 pt
+lobe outline's end to the N's ink: 0.37 pt
+== cycle arcs end the gap from a station's outline (its letters and bond ends), not from its box
+(np.float64(161.69557964096737), np.float64(128.17967187780755))
+check: OK
+arc ends to the nearest letter: [4.6, 5.3, 11.9] pt (gap 4.3 )
+== a callout's arrow comes in clear of a curly arrow ending at the same atom
+(np.float64(141.51757068200214), np.float64(88.49341053890682))
+check: OK
+callout arrow to the curly arrows: True
+== a terminal OH crowding a C=O label reads another way
+(np.float64(57.85353162899183), np.float64(45.60904706449591))
+check:
+  stereo at Atom(C) is ambiguous: its three plain bonds lie within 180 deg
+OH reads up ; white to the C=O's O: 6.4 pt

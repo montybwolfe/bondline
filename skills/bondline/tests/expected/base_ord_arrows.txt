@@ -1,0 +1,6 @@
+== arrow kinds
+(np.float64(355.05347026596735), np.float64(47.525968750000004))
+check: OK
+== vertical and text
+(np.float64(116.52545331449592), np.float64(122.97812500000002))
+check: OK

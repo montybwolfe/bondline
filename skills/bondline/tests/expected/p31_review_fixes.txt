@@ -1,0 +1,9 @@
+(np.float64(151.61373192865764), np.float64(88.5590605423595))
+check: OK
+terminal dot: off the vertex by 1.0 x half the line spacing, at 90 deg to the bond
+ring/chain vertex dot stays on the vertex: True
+callout: leaves level True, sharpest turn per step 4.3 deg (even: < 8)
+callout: leaves level True, sharpest turn per step 4.8 deg (even: < 8)
+raised: labels={15: 'Me'}: atom 15 (C) has 3 bonds, but Me is a one-bond group; atom indices follow the SMILES string from 0
+check:
+  Atom(Me) is labelled Me but has 2 bonds: a one-bond group on the wrong atom?

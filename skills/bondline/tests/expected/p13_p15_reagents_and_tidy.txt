@@ -1,0 +1,30 @@
+== consistency: SN2 by the same rule on three substrates gives the same placement and the same arrows
+  Br /H : nucleophile at 180 deg, 2.00 BU; sweeps [65, 170]; issues 0
+  I  /Me: nucleophile at 180 deg, 2.00 BU; sweeps [65, 180]; issues 0
+  OTs/Et: nucleophile at 180 deg, 2.00 BU; sweeps [65, 170]; issues 0
+== consistency: deprotonation by HO-, EtO- and Et3N places each base the same way
+  OH   : 270 deg from H, 2.00 BU; base arrow sweep 29; issues 0
+  OEt  : 270 deg from H, 2.00 BU; base arrow sweep 29; issues 0
+  NEt3 : 270 deg from H, 2.00 BU; base arrow sweep 29; issues 0
+== acid catalysis: hydronium protonates a ketone where the new O-H will point
+check: OK
+  #0 inter sweep  70  shaft 0.96 BU
+  #1 hook  sweep 200  shaft 1.31 BU
+== stock reagents
+   OH- key OH
+   O- H key O
+   O H H key O
+   OH2 key OH2
+   O+ H H H key H
+   OH3+ key OH3
+   OMe- key OMe
+   Cl- key Cl
+   NEtiPr2 key NEtiPr2
+   Cl H key H
+== dock() keeps its signature; its default distance follows the rule
+  C to C 1.90 BU, O- to C 2.00 BU
+== negative: explicit O-H that nothing uses is noted; tidy() clears it
+check: OK
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:O) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+check: OK

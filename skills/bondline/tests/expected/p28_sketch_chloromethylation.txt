@@ -1,0 +1,11 @@
+validate: OK
+validate: OK
+validate: OK
+validate: OK
+balance: lost H2O
+(np.float64(480.37016175065526), np.float64(231.80110631412046))
+check: OK
+arenium: CH2 at 0 deg, its H at 60 deg (exterior bisector 30; H beside C1)
+alcohol: CH2 at 30 deg (back on the bisector once the H has gone)
+SN2: Cl- comes in at 120 deg; exactly anti would be 150 (OEt in the way)
+alcohol O lone pair at 80 deg (above the O, clear of its H)

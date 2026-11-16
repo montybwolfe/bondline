@@ -1,0 +1,16 @@
+== metallocenes: staggered and eclipsed ferrocene, bis(benzene)chromium, acetylferrocene
+check: OK
+== half-sandwich, piano stool and a bent metallocene
+check: OK
+== bent metallocenes: Schwartz's reagent, one opening to the left, one built by hand with persp_ring(toward=)
+check: OK
+  pieces of the line to the top ring of ferrocene: 2
+== delocalised hybrids: Cp-, tropylium, benzene, allyl cation and anion
+check: OK
+  allyl bonds: [('partial', 1), ('partial', 1)]
+== checks: an eta line too short to read; a dative bond with no free partner to slide out
+check:
+  the eta line from Atom(Fe) shows only 2.2 pt before it meets its pi system; put a ring's centre about 1.75 BU from the metal (as sandwich() does)
+  dative bond Atom(N)-Atom(B) shows 4.0 pt, too little for its arrowhead and a shaft; lengthen it (length=1.6, free=True)
+  labels of Atom(Me) and Atom(F) run together on one line (3.4 pt apart): they read as one; turn one of the groups, or move the atoms apart
+  dative bond slid out to 1.52 BU; free: True

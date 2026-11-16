@@ -1,0 +1,13 @@
+== proline
+stereo: Atom(C:3)=S
+(np.float64(62.60561730194127), np.float64(52.91993878813922))
+check: OK
+== lactone protonation
+validate: OK
+(np.float64(177.22041332775328), np.float64(98.29461654610859))
+check: OK
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:Oc) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+== Pd cycle from one template
+(np.float64(209.5954010200308), np.float64(155.80355508223607))
+check: OK

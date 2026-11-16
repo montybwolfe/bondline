@@ -1,0 +1,15 @@
+== 2-butanol
+stereo: Atom(C)=R
+stereo: Atom(C)=S
+(np.float64(91.4645948869755), np.float64(46.13296875))
+check: OK
+== alanine and E/Z
+stereo: Atom(C)=R
+stereo: no stereocentres; Atom(C)=Atom(C):E
+stereo: no stereocentres; Atom(C)=Atom(C):Z
+(np.float64(181.96564233046325), np.float64(38.9796875))
+check: OK
+== ring stereo
+stereo: Atom(C)=S, Atom(C)=S
+(np.float64(56.25214119348775), np.float64(58.281250000000014))
+check: OK

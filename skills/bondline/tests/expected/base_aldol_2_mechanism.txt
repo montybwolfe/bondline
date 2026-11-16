@@ -1,0 +1,17 @@
+validate: OK
+validate: OK
+validate: OK
+continuity:
+  step 2->3: Atom(C:C2b) moved 0.35 BU
+  step 2->3: Atom(C:C1b) moved 0.35 BU
+  step 2->3: Atom(O:O1b) moved 0.35 BU
+  step 2->3: Atom(C:Ca) moved 0.35 BU
+  step 2->3: Atom(C:C1) moved 0.35 BU
+  step 2->3: Atom(O:O1) moved 0.35 BU
+  step 3->4: Atom(H:Hw) moved 1.20 BU
+(np.float64(441.3879569651066), np.float64(125.93240661752107))
+check: OK
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:Ob) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+  explicit H on Atom(O:O1b) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+  explicit H on Atom(O) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose

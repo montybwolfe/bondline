@@ -1,0 +1,7 @@
+(np.float64(257.84652415359847), np.float64(58.481799239208534))
+check: OK
+cubane: cage atoms 8, broken bonds 2, wedges 0, bonds out of the cage [1.0]
+adamantanol: cage atoms 10, broken bonds 1, wedges 0, bonds out of the cage [1.0]
+pinned bicyclononanone: cage atoms 12, broken bonds 2, wedges 0, bonds out of the cage []
+pins kept: True
+raised: from_smiles xy: no atom 5 (atom indices follow the SMILES string from 0)

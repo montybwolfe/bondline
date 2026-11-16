@@ -1,0 +1,62 @@
+== two or more lone pairs on one atom stand apart as pairs (120 deg for two, 90 for more), on the open side
+(np.float64(225.2913341220694), np.float64(66.37265625))
+check: OK
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+water pairs [30, 135] charge None
+ether pairs [210, 330] charge None
+hydroxide pairs [90, 180, 270] charge 135
+alkoxide pairs [30, 120, 300] charge 75
+bromide pairs [0, 90, 180, 270] charge 45
+== check(): a lone pair or radical with no room is a slip; carbenes and cyclic transition states are not
+check:
+  lone pair on Atom(C:3): its bonds and its 2 H (from the SMILES) leave no room for it; it is on the wrong atom, or write the carbanion or carbene in the SMILES ([CH-], [C])
+  radical on Atom(C:3): its bonds and its 1 H (from the SMILES) leave no room for it; it is on the wrong atom, or write the radical in the SMILES ([CH], [C])
+  Atom(N) has 2 lone pairs drawn, but its bonds and charge leave room for 1: one is on the wrong atom
+(np.float64(198.35428856475139), np.float64(66.46224380398331))
+check: OK
+formula :CH2 CH2  :CCl2 CCl2
+== site labels: their text box beside the dot, clear of a triple bond; a dot stays with its step
+(np.float64(227.12856973007402), np.float64(48.68944998077756))
+check: OK
+E at 45 deg, box 3.9 pt from its dot
+2^{nd} Nu at 255 deg, box 3.8 pt from its dot
+1^{st} E at 15 deg, box 7.5 pt from its dot
+dots after copy(): 0
+== charges: the default place passes check(); a charge by its own p orbital belongs to it; a perspective frame
+(np.float64(131.91103162899182), np.float64(47.840625))
+check: OK
+Atom(N) charge at 0 deg, 3.4 pt (allowed 4.4 )
+Atom(C) charge at 45 deg, 9.6 pt (allowed 4.5 )
+== a ring carbanion's pair goes outside the ring; its charge beside the pair, not by a charged neighbour
+(np.float64(116.07998693206336), np.float64(45.96506079389619))
+check: OK
+Atom(C:0) pair 282 charge 0 in ring: False
+Atom(C:1) pair 180 charge 300 in ring: False
+== locants: in a ring's corner where the outside is full; clear of their own atom's label
+(np.float64(69.13552399351575), np.float64(76.46889436201857))
+check: OK
+locants inside a ring: [2, 6]
+== a lone pair clear of a wide lone label (Nu), and in the empty sp2 lobe drawn for it
+(np.float64(110.88305708378203), np.float64(46.658125000000005))
+check: OK
+Nu pair clear of its letters: 1.8 pt; carbene pair at 0 deg (its lobe at 0)
+== orbitals: s spheres show their phase (bonds stop at them), a hybrid has its back lobe where no bond runs, an orbital can carry its name
+(np.float64(179.61001394459487), np.float64(58.711808887759986))
+check: OK
+lobes drawn: [1, 1, 1, 2] fills: ['#B8B8B8', 'white']
+== a floating substituent across a ring edge; the wiggly line of a disconnection and of an attachment point
+(np.float64(180.61545129327612), np.float64(52.696839289684036))
+check: OK
+formula C6H4RX | crossed edge drawn in 3 lines (inner line broken)
+== partial charges: kept clear by their text box; charge_at steers one
+(np.float64(131.4332768256067), np.float64(63.30837730670871))
+check: OK
+steered δ+ at 270 deg; the TS carbon's δ+ at 45 deg
+== a halo behind an H label (S.dot on a labelled atom); crossed dipole arrows beside polar bonds
+(np.float64(87.23427387561759), np.float64(55.27455434317089))
+check: OK
+== the + - notation of a carbene (a.ambi): one mark, net charge 0, the carbene's pair counted
+(np.float64(38.87903162899184), np.float64(27.21078125))
+check: OK
++ - at 270 deg; formula CR2 charge 0

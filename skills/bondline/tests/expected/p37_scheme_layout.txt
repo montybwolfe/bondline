@@ -1,0 +1,44 @@
+(np.float64(310.93661355826237), np.float64(51.398629013137544))
+check: OK
+caption under the brackets: True | count is a subscript at the lower right: True | arrows clear the brackets (pt): 9.9 8.6
+(np.float64(313.65781250000003), np.float64(53.86958001528724))
+check: OK
+white between neighbouring captions (BU): [1.0, 1.0]
+(np.float64(181.43947503697905), np.float64(147.04738338370632))
+check: OK
+stacked in order: True | first captions on one line: True | joint below the own caption: True
+(np.float64(227.0962072545188), np.float64(116.94018718450442))
+check: OK
+reagent caption sits above the shaft (pt): 6.8 | structure above its caption: True
+(np.float64(152.74751342979107), np.float64(250.52501132505708))
+check: OK
+stack within the arrow: True | sides (structure, text): right right
+(np.float64(148.80279836336572), np.float64(225.56532382505708))
+check: OK
+stack within the arrow: True | sides (structure, text): left right
+(np.float64(171.4156953208638), np.float64(51.858073560245856))
+check: OK
+callout tip to its label (pt): 1.6 | spiro tip to its vertex (BU): 0.29
+(np.float64(142.3031372317432), np.float64(66.05431526120452))
+check: OK
+notes apart (BU): 1.0
+(np.float64(193.45431893072785), np.float64(56.58249378779165))
+check: OK
+note reaches over the arrow: True | structure gap after the arrow (BU): 0.6
+check: OK
+shaft meets head straight (deg): 0.0
+a note declared after the row, over the arrow: ["a line runs through the text 'late note'", "the note 'late note' stands over a reaction arrow, where it reads as a condition: declare the pointer before the row() that places its structure, or give it another side"]
+(np.float64(271.40020534737926), np.float64(165.59110943465058))
+check: OK
+product drawn outside the cycle: True | texts: ['Pd(OAc)2', 'oxidative addition', 'reduction']
+placed arrow: ["a reaction arrow runs through the label 'O'", "a reaction arrow runs through the label 'H3'", "a reaction arrow runs through the text 'HCl'"]
+crossed arrow text: []
+(np.float64(262.26114470147877), np.float64(66.1225))
+check: OK
+branch labels below the arrow: True | apart (BU): 2.04 | CO2 drawn above arrow 1: True
+(np.float64(208.53343750000002), np.float64(166.40001148645948))
+check: OK
+headings above, on one line: True True | fills: 2 | frames: 2
+(np.float64(239.96943988164844), np.float64(39.406062500000004))
+check: OK
+halves (BU), forward then reverse: 2.6 1.3 | 1.3 2.6

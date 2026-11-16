@@ -1,0 +1,21 @@
+== crossed aldol: two enolisable aldehydes, two sites for enolate formation
+Nu label at 90 deg
+E label at 30 deg
+Nu label at 150 deg
+E label at 30 deg
+(np.float64(287.1831452633429), np.float64(83.9613422634604))
+check: OK
+== one enolisable partner: notes from above and below, a bond aligned at 180 - deg, then flipped
+acetophenone: O at 90 deg, CH3 at 330 deg
+(np.float64(401.2875763326362), np.float64(98.32433612022322))
+check: OK
+== four products after one arrow: a second row under the first, one caption under each pair
+rows centred: 0.0 pt apart; row gap 0.9 BU
+(np.float64(298.13899701063076), np.float64(125.08708592357956))
+check: OK
+== negative: pointers sent through their molecule are reported
+check:
+  the pointer to Atom(C:0) runs into bond Atom(C:0)-Atom(C:1) (give it another side)
+  the pointer to Atom(C:0) runs into bond Atom(C:1)-Atom(O:2) (give it another side)
+  the pointer to Atom(C:3) runs into bond Atom(C:1)-Atom(O:2) (give it another side)
+  the pointer to Atom(C:3) runs through the label of Atom(O:2) (give it another side)

@@ -1,0 +1,14 @@
+== LDA drawn over the arrow, conditions under it; an aldehyde electrophile over the next arrow
+(np.float64(366.2329718149377), np.float64(94.18803125000001))
+check: OK
+balance: gained C3H6O
+== arrow kinds: <- (with B:⊖ in text), -/-> (does not happen), <= (retrosynthesis, pointing left)
+(np.float64(279.86343626020897), np.float64(37.88846733259657))
+check: OK
+raised: arrow kind '-->': use one of ->, <-, <=>, <->, =>, <=, -/->, <-/-, ->>, <=>>, <<=>
+== chemical typography in conditions and captions
+(np.float64(453.8596560654227), np.float64(65.21459375))
+check: OK
+== vertical arrows of every kind (a scheme that turns a corner: equilibria, retrosynthesis), text clear of the pair
+(np.float64(186.03268750000004), np.float64(45.440000000000005))
+check: OK

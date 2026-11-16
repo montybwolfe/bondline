@@ -1,0 +1,13 @@
+== cycle with in and out branches, 1200 dpi
+(np.float64(210.75414262895436), np.float64(189.86655795890005))
+check: OK
+== negative: the old construction (shaft running up to the tip, head on a two-sample chord) is caught
+check:
+  arrowhead at (71, -13) pt: the shaft shows beyond the head
+  arrowhead at (71, -13) pt sits 7 deg off its curve
+  arrowhead at (-47, -54) pt: the shaft shows beyond the head
+  arrowhead at (-27, 67) pt: the shaft shows beyond the head
+  arrowhead at (-27, 67) pt sits 7 deg off its curve
+  arrowhead at (-72, 60) pt: the shaft shows beyond the head
+  arrowhead at (-43, -91) pt: the shaft shows beyond the head
+  arrowhead at (-43, -91) pt sits 16 deg off its curve

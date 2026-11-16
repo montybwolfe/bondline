@@ -1,0 +1,36 @@
+== a p orbital: two soft teardrops about 0.6 as wide as long, meeting at a bare carbon's nucleus
+(np.float64(101.98333708479673), np.float64(42.49000807256155))
+check: OK
+Atom(C) lobe 11.2 pt long, 6.7 pt wide ( 0.6 of its reach ); starts 0.0 pt out; closed at the nucleus
+Atom(O) lobe 13.4 pt long, 9.4 pt wide ( 0.55 of its reach ); starts 3.9 pt out; open at the label
+Atom(C) lobe 11.2 pt long, 6.7 pt wide ( 0.6 of its reach ); starts 0.0 pt out; closed at the nucleus
+O lobe's open end: 2.75 pt across (line width 1.1 )
+C+ charge at 45 deg, 0.89 BU out; beside its lobe: True ; nearer its lobe than R: True
+== a lobe with a bond of its atom within 50 deg of its axis is slimmer, so the two never run side by side
+(np.float64(34.98989169605925), np.float64(46.102871233054714))
+check: OK
+S lobes (size 1.6 ) form (0.42, 16.0, 12.0) ; white to the methyl bonds 0.42 pt
+== electrons: two dots apart in the full part of a hybrid lobe, on a labelled atom and on a bare carbanion
+(np.float64(109.61198930101342), np.float64(40.24532425871856))
+check: OK
+Atom(N) lobes 1 dots 3.1 pt apart, 0.59 pt inside the outline
+Atom(C) lobes 2 dots 3.1 pt apart, 0.59 pt inside the outline
+== an upright bond meets its ring joins without a step (lines drawn unsnapped)
+(np.float64(34.04153162899184), np.float64(38.07017059221718))
+check: OK
+== dotted bonds (H-bonds): a solid bond's white at a label, dots evenly spaced and centred, alike when alike
+(np.float64(57.883063257983665), np.float64(79.00984374999999))
+check: OK
+Atom(H) ... Atom(O) 3 dots 2.36 pt apart; white past a solid bond's end at each label: [0.69, -0.0]
+Atom(H) ... Atom(O) 3 dots 2.34 pt apart; white past a solid bond's end at each label: [0.69, 0.03]
+== two H-bonds to one Cl-: as many dots on each though one meets the C and the other the l, all clear of the letters
+(np.float64(57.883063257983665), np.float64(71.66032782260172))
+check: OK
+Atom(H) ... Atom(Cl) 3 dots 2.52 pt apart; white from the dots to the letters: [1.91, 1.9]
+Atom(H) ... Atom(Cl) 3 dots 2.09 pt apart; white from the dots to the letters: [1.67, 1.64]
+== free text keeps a third of a bond from structures it is not part of: a callout's note clear of all ink; check()
+(np.float64(85.47634580657204), np.float64(68.36101120539202))
+check: OK
+the note's white to the ink: 5.1 pt (at least 5.0 )
+check:
+  the text 'a free note' comes within 4.4 pt of Atom(C:0)...'s structure (keep 5 pt): move it, or give it another side

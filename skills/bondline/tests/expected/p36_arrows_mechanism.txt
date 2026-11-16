@@ -1,0 +1,17 @@
+validate: OK
+validate: OK
+validate: OK
+(np.float64(205.6372748775884), np.float64(74.58899359315927))
+check: OK
+SN2: HO- at 165 deg (Br at 0, Et at 200: the straight run in clears Et)
+hydride shift: shift | tail on the C1 side: True | curls over the top: True | methyl shift: shift | E1: shift
+(np.float64(258.61996912899184), np.float64(57.6320485364085))
+check: OK
+hook on CHCl3: hook | lands between H and the upper Cl: True | O-H hooks: charges outside the loops: [True, True] | same place in both copies: True
+(np.float64(102.16434412899184), np.float64(39.42918026543833))
+check: OK
+benzene arrows alike: True | sweep 117.5 | beta-H arrows turn ['ccw', 'cw']
+free species read: ['left', 'left'] | cyanide C shown: True | hydronium charge pinned at 150 deg (its O-H bonds turned by 60 deg)
+fused ring outside: True | tBu+ angles [0, 120, 240] | tidied cross [0, 120, 240] | carbodiimide C after join [0, 120, 240]
+arrow from a bare H: True
+arrow onto its own source: curly: the arrow from Atom(C) has it as its target too; for 

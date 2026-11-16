@@ -1,0 +1,17 @@
+== figure 1: aldol scheme
+(np.float64(239.74510994348773), np.float64(49.5775))
+check: OK
+  structures off their row's arrow line: at most 0.00 pt
+== figure 2: aldol mechanism (also repro_1 rebuilt)
+validate: OK
+validate: OK
+validate: OK
+continuity: OK
+  product O label: OH | by-product: OH -1
+(np.float64(372.80451230453974), np.float64(91.28982923117232))
+check: OK
+  arrows: 8, shortest shaft 0.80 BU, smallest sweep 42 deg, all >= 0.8 BU and >= 25 deg: True
+  structures off their row's arrow line: at most 0.00 pt
+  base to H: 2.00 BU (rule 2.0)
+  enolate C to carbonyl C: 1.70 BU (rule 1.7)
+  O- to water H: 2.00 BU (rule 2.0)

@@ -1,0 +1,13 @@
+== captions
+(np.float64(261.4435474434877), np.float64(40.369484375))
+structure centre - arrow line: 0.0 pt
+structure centre - arrow line: 0.0 pt
+structure centre - arrow line: 0.0 pt
+check: OK
+== docked reagent below, curly arrows
+(np.float64(136.2789137390341), np.float64(76.95668378693077))
+main fragment centre - arrow line: 0.0 pt
+gaps (BU): 0.6 0.6
+check: OK
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:B) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose

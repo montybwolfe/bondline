@@ -1,0 +1,4 @@
+morphine: atoms 23 -> 23, R/S identical True, labels identical True, SUP groups 0
+   SRSRR
+silvestrol: atoms 41 -> 41, R/S identical True, labels identical True, SUP groups 4
+   RSRRSRRSR

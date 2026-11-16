@@ -1,0 +1,25 @@
+== E2: base, C-H into C-C (adj), C-Br onto Br (hook)
+check: OK
+  #0 inter sweep  65  shaft 0.98 BU  cw   ok=True
+  #1 adj   sweep 120  shaft 0.80 BU  cw   ok=True
+  #2 hook  sweep 170  shaft 1.29 BU  cw   ok=True
+== enolate attacking ethanal: lone pair into C-O (lpadj)
+check: OK
+  #0 lpadj sweep 174  shaft 0.82 BU  cw   ok=True
+  #1 inter sweep  82  shaft 1.84 BU  ccw  ok=True
+  #2 hook  sweep 180  shaft 1.18 BU  cw   ok=True
+== radical abstraction: hook onto an unlabelled carbon stays compact and never wraps round a bond
+check: OK
+  #0 inter sweep  59  shaft 0.38 BU  ccw  ok=True
+  #1 adj   sweep 120  shaft 1.63 BU  ccw  ok=True
+  #2 hook  sweep 202  shaft 1.03 BU  ccw  ok=True
+== Diels-Alder: one cyclic array, all inside the ring, all turning the same way
+validate: OK
+check: OK
+  #0 adj   sweep 129  shaft 0.77 BU  cw   ok=True
+  #1 adj   sweep 116  shaft 0.75 BU  cw   ok=True
+  #2 adj   sweep 105  shaft 0.74 BU  cw   ok=True
+== negative tests: the checks fire on tampered arrows
+  straight: ['curly #0 ((Atom(C), Atom(C)) -> (Atom(C), Atom(C))): is nearly straight (8 deg of turn): an electron-pushing arrow must read as curved']
+  mixed loop: ['curly arrows #0, #1, #2 form a cyclic array but do not all turn the same way round it']
+  crossing: ['curly #0 ((Atom(C), Atom(Br)) -> Atom(Br)): shaft crosses a bond where it runs into a label (it slips between the bond and the label)']

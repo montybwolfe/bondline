@@ -1,0 +1,25 @@
+{
+  "name": "bondline",
+  "displayName": "bondline",
+  "version": "1.0.0",
+  "description": "A natural-language chemistry engine for Claude: structures, curly-arrow mechanisms, reaction schemes and catalytic cycles, checked before they're drawn.",
+  "author": {
+    "name": "Monty Wolfe",
+    "url": "https://github.com/montybwolfe"
+  },
+  "homepage": "https://github.com/montybwolfe/bondline",
+  "repository": "https://github.com/montybwolfe/bondline",
+  "documentationUrl": "https://github.com/montybwolfe/bondline#readme",
+  "supportUrl": "https://github.com/montybwolfe/bondline/issues",
+  "privacyPolicyUrl": "https://github.com/montybwolfe/bondline/blob/main/PRIVACY.md",
+  "license": "MIT",
+  "keywords": [
+    "chemistry",
+    "organic chemistry",
+    "reaction mechanisms",
+    "chemical structures",
+    "molfile",
+    "rdkit",
+    "scientific figures"
+  ]
+}

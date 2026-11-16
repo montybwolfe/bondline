@@ -1,0 +1,51 @@
+===== sn2
+validate: OK
+continuity: OK
+(np.float64(183.69826140082188), np.float64(41.750453314495914))
+check:
+  mol1: bond Atom(OH:O)-Atom(C:C) length 2.00 BU: to connect two fragments use join(), which lays the new bond out at 1 BU (flag free=True if intended)
+  labels of Atom(H) and Atom(H) run together on one line (1.2 pt apart): they read as one; turn one of the groups, or move the atoms apart
+  Atom(C:C) sits 1.00 BU from Atom(Br:Br) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+  bonds at Atom(C:C) only 30 deg apart
+===== e2
+validate: OK
+(np.float64(126.42795603529643), np.float64(86.89970290319901))
+check:
+  Atom(C:c2) sits 1.00 BU from Atom(Br:Br) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(OEt:B) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+===== eas
+validate: OK
+validate: OK
+(np.float64(275.65870041678926), np.float64(61.33200368306986))
+check: OK
+===== add
+(np.float64(60.277797064495914), np.float64(58.28125))
+check:
+  bond Atom(CH3:Nu)-Atom(MgBr:Mg) between two labels shows only 1.3 pt; lengthen it (length=1.3, free=True) or write one condensed label
+===== da
+validate: OK
+(np.float64(114.38706325798368), np.float64(42.21980804848572))
+check: OK
+===== radical
+validate: OK
+(np.float64(191.08562500000002), np.float64(29.40542703948089))
+check:
+  mol1: bond Atom(H:H)-Atom(Cl:Cl) length 2.20 BU: to connect two fragments use join(), which lays the new bond out at 1 BU (flag free=True if intended)
+  Atom(CH3:C) sits 1.00 BU from Atom(H:H) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
+===== smiles
+(np.float64(297.5436376269375), np.float64(74.92956319258683))
+check: OK
+===== chairs
+(np.float64(177.78466826348935), np.float64(56.93317959005345))
+check: OK
+===== ester
+validate: OK
+(np.float64(145.16211908859648), np.float64(121.78264774362407))
+check:
+  bond angle at Atom(O:Om) is 90 deg (use 120 or 180)
+notes (deliberate near reacting centres? confirm):
+  explicit H on Atom(O:Om) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose
+===== cyc
+(np.float64(198.16071888005155), np.float64(175.4757467863049))
+check: OK

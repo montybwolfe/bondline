@@ -1,0 +1,13 @@
+penam square edges: [0, 90, 0, 90] S above N: True aligned: [54, 144, 54, 144] stereo True
+(np.float64(234.02387828758305), np.float64(98.5235496622467))
+check: OK
+strychnine bonds 0.99-1.01 BU stereo True [(8, 'S'), (13, 'S'), (14, 'R'), (15, 'R'), (17, 'S'), (18, 'R')]
+artemisinin stereo True [(1, 'R'), (4, 'S'), (5, 'R'), (9, 'S'), (10, 'R'), (11, 'S'), (14, 'R')]
+(np.float64(205.5349407438257), np.float64(84.53012500000001))
+check: OK
+notes (deliberate near reacting centres? confirm):
+  wedge Atom(C:14)-Atom(C:13) joins two stereocentres (IUPAC prefers wedges on exocyclic bonds)
+(np.float64(247.13379285311092), np.float64(84.1762371437292))
+check: OK
+morphine stereo True marks [(4, 3, 'wedge'), (5, 19, 'hash'), (6, 21, 'hash'), (16, 22, 'wedge'), (17, 20, 'hash')] broken [(18, 19)]
+dextromethorphan stereo True marks [(4, 3, 'hash'), (9, 8, 'wedge'), (10, 20, 'wedge')] broken [(2, 3)]

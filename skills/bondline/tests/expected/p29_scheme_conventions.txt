@@ -1,0 +1,18 @@
+== level chain, C=O up; a reagent multiple
+C=O points 101 deg; chain end-to-end 0 deg
+(np.float64(179.72641059876915), np.float64(71.64964162209837))
+check: OK
+raised: from_smiles align: atom 3 is part of an abbreviation here (CO2Me); name a drawn atom, or pass abbrev=False
+== the ring that does not form (dashed crossed arrow, pointing left) and the one that does
+(np.float64(313.33649756090523), np.float64(76.56438291498355))
+check: OK
+== Michael addition at a substituted ring carbon: the product's gem pair is symmetric (like=)
+exocyclic bonds at the quaternary carbon: [60, 336]
+(np.float64(177.1868053006666), np.float64(78.30069168425544))
+check: OK
+== steroids: ring-fusion H up or down when the drawing is level; letters in the rings; coloured caption
+fusion H atoms: 3 directions [90, 270, 270] styles ['hash', 'hash', 'wedge']
+stereo: Atom(C:1)=S, Atom(C:4)=S, Atom(C:5)=R, Atom(C:14)=R, Atom(C:16)=S, Atom(C:19)=S
+dict_values(['S', 'S', 'R', 'R', 'S', 'S'])
+(np.float64(220.9436456894593), np.float64(87.67861888325186))
+check: OK

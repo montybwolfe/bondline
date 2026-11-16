@@ -1,0 +1,11 @@
+['C6H5'] ['C6F5']
+labels: ['O', 'NH', 'C6H5']
+(np.float64(102.45159566702499), np.float64(44.612279259732645))
+check:
+  bond Atom(C)-Atom(C) runs into label Atom(CH3)
+  bonds at Atom(C) only 18 deg apart
+wedges=None: [(9, 10, 'wedge')]
+wedges='exo': [(9, 10, 'wedge')]
+(np.float64(49.19892602423074), np.float64(61.23722424899121))
+check: OK
+flat ring fusion keeps its wedge: [(1, 0, 'hash')]

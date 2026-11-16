@@ -1,0 +1,12 @@
+== chair
+(np.float64(87.94904677749106), np.float64(41.59618151486565))
+check: OK
+== newman
+(np.float64(139.1925539966812), np.float64(47.9996875))
+check:
+  labels overlap: Atom(Me) / Atom(Me)
+  labels overlap: Atom(H) / Atom(H)
+  labels of Atom(Me) and Atom(Me) are cramped (< 1.5 pt apart)
+  labels of Atom(H) and Atom(H) are cramped (< 1.5 pt apart)
+  bond Atom(C)-Atom(Me) runs into label Atom(Me)
+  bond Atom(C)-Atom(H) runs into label Atom(H)
