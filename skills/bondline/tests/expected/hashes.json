@@ -222,7 +222,7 @@
   "dashed_hbr.png": "e0cf7db031033bede88c428dfd0a23521c776061affdf714c0f278966198bbe0",
   "eq_text.png": "9fd2c575bbf4e0b31a96f7a9743e6b008a6a5888cbf6e34bde9328ec9a79879b",
   "multistep.png": "316f0e635d3eb69e978a808fbb9e13b45b678f6c54a7c9eb82b4e31d5cf8df09",
-  "orbitals.png": "849988241fc9f19092b940c14289629768e8a1540ccdece059904a90f075f8b1",
+  "orbitals.png": "16ff2ea596516dc29ca68d59276923a558d76a7be0ffc5e4bf5cb95e17e01420",
   "text.png": "efe5e3af42b881faac563fc9fe2cbe825099abcab47afebf05c6f78fb3a14236",
   "valence_labels.png": "6aa69ebd44cde4f38c2a2aa6105276da0a7f1482a0f5422a4c2dc5c9f8907304"
  },
@@ -293,15 +293,15 @@
   "hbonds_cl.png": "be57d8b3a34e0bdf76ea6bbfaa59e260d599b2ef19b9d286f4482b74324dd98d",
   "note.png": "f2ee010db1f0f6459b1071a63523d7fd5187b6cb2830373504b085fd75294fb1",
   "pairs.png": "d0d03d769b6ff256fa0ab86c33734000369a8b5342860c9628b4aa37dfbc6707",
-  "pi_cation.png": "a793650044ee06fda13c6459135f6ace65f81afb5ea52698feb997d98c0e154f",
+  "pi_cation.png": "a0c6f16a5c07032a5940c66480d1311bbb9452dd078e48df65b03c174e5eebf3",
   "ring.png": "3a0336de831010cab89d55ff3ea6aa9d386feb5eff5023bb5ab84d573f0ca2e6",
-  "slim.png": "4c9b17a092362828b5a199e067f589f466731da9414d66300482b9ab9e940c4d"
+  "slim.png": "5da398220b8c802c886dcf5f3f2b13ee6afcaef1b2d1c7e546fe17595700aec3"
  },
  "p42_review_fixes": {
   "callout_curly.png": "54c8906aebd0abd29da123016a17ccf6fece068f57efe7a19a487815bd9b8038",
   "centred_co.png": "a5ab738a27228a2021eeaa611075eaa77eee8182fc882215f483be79512a76a6",
   "cycle_ends.png": "d747acce874c2ae604ec80520c1a30bc2d29296d376d743e92353f48a538aef1",
-  "lobe_letter.png": "e79e6094005fe08fbe0e84b47267bb5c3d5d5af7398e236827c73a1ea60c2bc6",
+  "lobe_letter.png": "c9275630acb17aa40cf75288a18e29a76d971a44b95508856a031ae81a2f3e65",
   "oh_untangled.png": "109340f324a65ab1bbcb11468a002eccb06cc8bf1c51c1c0b7836882ba402c65",
   "wedge_row.png": "0ce8bf438857eb4937811dccef7b2e4c1553e9795f1944fc67c3f8ab18eda5a1"
  },

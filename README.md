@@ -64,7 +64,7 @@ Once it's installed, just ask:
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle-dark.png">
-    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle.png" alt="Suzuki coupling of 4-bromoanisole and phenylboronic acid, catalysed by Pd(PPh3)2" width="57%">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle.png" alt="Suzuki coupling of 4-bromoanisole and phenylboronic acid, catalysed by Pd(PPh3)2, each PPh3 drawn in full" width="68%">
   </picture>
 </p>
 

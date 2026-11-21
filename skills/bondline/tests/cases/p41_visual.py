@@ -19,7 +19,7 @@ for ex in S.extras:
     up = P[0] - A; along = up @ u; across = up @ perp(u)
     print(a, "lobe", round(float(along.max() - along.min()), 1), "pt long,", round(float(across.max() - across.min()), 1),
           "pt wide (", round(float((across.max() - across.min()) / along.max()), 2), "of its reach ); starts",
-          round(float(along.min()), 1), "pt out;", "open at the label" if S._orbital_prims(ex)[0][4:] == ("open",) else "closed at the nucleus")
+          round(float(along.min()), 1), "pt out;", "open at the label" if S._orbital_prims(ex)[0][4:5] == ("open",) else "closed at the nucleus")
 cut = [p for ex in S.extras if ex[0] == "orbital" and ex[1] is o for p in S._orbital_prims(ex) if p[0] == "orb"][0]
 P = np.asarray(cut[1], float); print("O lobe's open end:", round(float(norm(P[0] - P[-1])), 2), "pt across (line width", S.st.lw, ")")
 print("C+ charge at", round(x._chg[2]), "deg,", round(float(norm(x._chg[0] - S.P(x)) / S.st.bond), 2), "BU out; beside its lobe:",

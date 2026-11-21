@@ -381,11 +381,16 @@ class _SceneFinish:
             u = dirv(t); v = perp(u)                                                         # labelled atom's lobe
             H = self._lobe_half(k * L, q, k == 1.0, self._lobe_form(a, t) if k == 1.0 else None)
             o = self._lobe_tip(a, u, A, size) if lab else 0.0   # comes out from behind its letter, its tip hidden: cut there,
-            if lab:                                        # the outline left open (no pinch of two strokes reads as a dot)
+            full = None                                    # the outline left open (no pinch of two strokes reads as a dot)
+            if lab:                                        # and its fill running on behind the letter, up to its ink
                 c = self._exit_hull(a, u, A, self.LOBE_GAP, whole=True) - o
+                F = H if o >= 0 else np.vstack([[-o, float(np.interp(-o, H[:, 0], H[:, 1]))], H[H[:, 0] > -o + 1e-6]])
+                F = np.column_stack([F[:, 0], np.where(F[:, 0] < c - st.lw / 2, np.maximum(F[:, 1] - st.lw / 2, 0.0), F[:, 1])])
+                full = np.vstack([F, (F * [1, -1])[::-1][1:]]); full = A + u * o + full[:, :1] * u + full[:, 1:] * v   # (from the
+                # nucleus on, as wide as the inside of the outline where that has stopped short of the letter)
                 y0 = float(np.interp(c, H[:, 0], H[:, 1])); H = np.vstack([[c, y0], H[H[:, 0] > c + 1e-6]])
             loc = np.vstack([H, (H * [1, -1])[::-1][1:]])
-            return A + u * o + loc[:, :1] * u + loc[:, 1:] * v
+            return A + u * o + loc[:, :1] * u + loc[:, 1:] * v, full
         if kind == "s":                                    # a sphere, shaded for phase "up" and white for "down" (s + s in
             R = 0.42 * st.bond * size                      # and out of phase look different), its nucleus a dot on a bare
             P = A + R * np.array([dirv(t) for t in np.arange(0.0, 360.0, 5.0)])   # atom (not a bond's dash read as a minus)
@@ -397,8 +402,9 @@ class _SceneFinish:
                                                                   # edge it floats free: only a bare vertex shows it)
             lobes = [(angle, shade == "up", 1.0, None)] + ([(angle + 180, shade == "down", 1.0, None)] if kind == "p" else back)
             for t, filled, k, q in lobes:
-                P = lobe(t, k, q)
-                out.append(("orb", P, grey if filled else "white", col) + (("open",) if lab else ()))
+                P, full = lobe(t, k, q)
+                hulls = [h for x in a._g for h in x["hulls"]] if lab else None
+                out.append(("orb", P, grey if filled else "white", col) + (("open", full, hulls) if lab else ()))
         re_ = 0.8 * st.lp_r; c0, v = self._lobe_pair(A, dirv(angle), self._lobe_tip(a, dirv(angle), A, size), size, re_,
                                                      self._lobe_form(a, angle))
         for k in range(ne):                                # (an orbital's electrons: a little smaller than a lone pair's, so
@@ -656,9 +662,14 @@ class _SceneFinish:
                                                         lw=pr[5] if len(pr) > 5 else 0.8 * st.lw))
             elif pr[0] == "dot": ax.add_patch(Circle(pr[1], pr[2], fc=pr[3], ec="none",
                                                      zorder={("top",): 2.5, ("bottom",): 0.5}.get(tuple(pr[4:]), 1)))
-            elif pr[0] == "orb" and pr[4:] == ("open",):    # a lobe from behind a label: filled closed, its outline open,
-                ax.add_patch(Polygon(np.array(pr[1]), closed=True, fc=pr[2], ec="none", lw=0))      # both ending square a
-                ax.add_patch(Polygon(np.array(pr[1]), closed=False, fill=False, ec=pr[3], lw=st.lw, joinstyle="round", capstyle="butt"))   # hair off the letter
+            elif pr[0] == "orb" and pr[4:5] == ("open",):   # a lobe from behind a label: its fill runs on behind the letter
+                F = np.array(pr[5]); lo, hi = F.min(0) - 1, F.max(0) + 1; vs = [[lo, [hi[0], lo[1]], hi, [lo[0], hi[1]], lo]]
+                for h in pr[6]:                            # (clipped to outside the letters' outlines, so none shows in an O)
+                    h = np.asarray(h, float); ar = np.sum(h[:, 0] * np.roll(h[:, 1], -1) - np.roll(h[:, 0], -1) * h[:, 1])
+                    h = h if ar < 0 else h[::-1]; vs.append(np.vstack([h, h[:1]]))   # (clockwise: a hole in the box)
+                cp = _MPath(np.vstack(vs), np.hstack([[_MPath.MOVETO] + [_MPath.LINETO] * (len(v) - 2) + [_MPath.CLOSEPOLY] for v in vs]))
+                ax.add_patch(Polygon(F, closed=True, fc=pr[2], ec="none", lw=0, clip_path=(cp, ax.transData)))
+                ax.add_patch(Polygon(np.array(pr[1]), closed=False, fill=False, ec=pr[3], lw=st.lw, joinstyle="round", capstyle="butt"))   # its outline open, ending square a hair off the letter
             elif pr[0] == "orb": ax.add_patch(Polygon(np.array(pr[1]), closed=True, fc=pr[2], ec=pr[3], lw=st.lw, joinstyle="round"))
         for t in texts:
             if t.get("halo"):
