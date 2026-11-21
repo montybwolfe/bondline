@@ -331,12 +331,12 @@ class _SceneFinish:
         lab = a.drawn and not a.hidden and a._g
         off = self._lobe_tip(a, u, A, size) if (lab and kind != "s") else 0.0
         reach = 0.42 * st.bond * size if kind == "s" else off + self.LOBE_L * st.bond * size
-        q = A + u * (reach + 0.3 * st.size)
+        q = A + u * (reach + 0.5 * st.size)
         ha = "left" if u[0] > 0.3 else "right" if u[0] < -0.3 else "center"
         va = "bottom" if u[1] > 0.3 else "top" if u[1] < -0.3 else "center"
-        col = ex[7] if len(ex) > 7 else None; T = A + u * reach; need = 0.3 * st.size
+        col = ex[7] if len(ex) > 7 else None; T = A + u * reach; need = 0.5 * st.size
         g = self._rich_geo(ex[8], q[0], q[1], st.tsize, ha, va, col)
-        for _ in range(3):                                 # its ink (a subscript's descent too) 3 pt clear of the tip
+        for _ in range(3):                                 # its ink (a subscript's descent too) 5 pt clear of the tip
             ext = [self.F.path(t, x, y, sz, i, bd).get_extents() for t, x, y, sz, i, bd in g["runs"] if t.strip() and not self.F.missing(t)]
             if not ext: break
             x0, y0 = min(e.x0 for e in ext), min(e.y0 for e in ext); x1, y1 = max(e.x1 for e in ext), max(e.y1 for e in ext)
