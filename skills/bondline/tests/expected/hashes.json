@@ -1,315 +1,315 @@
 {
  "base_aldol_1_scheme": {
-  "aldol.png": "b02918a9c4c88c6db477581eba7437e965af5b6631b6b9870c84d4f368232e5f"
+  "aldol.png": "313538515e45359c13ece41c49b7aee2cfae2f989872ac164d6159ce9726dc18"
  },
  "base_aldol_2_mechanism": {
-  "aldol_mechanism.png": "508b303766142a18ad1f75bce8efb53e89e2516ad6c62911ac9d4153d499f172"
+  "aldol_mechanism.png": "3d4c06ca29bcfcb4e0b67ea39ce1933740b588b19f15d1ec412c59c7df61ade6"
  },
  "base_aldol_3_crossed": {
-  "crossed_aldol_mechanism.png": "1d4b4b3e8115093aa65ca4d923ba451193f637b0c58b9640f78a480589693566"
+  "crossed_aldol_mechanism.png": "05acecc353e9f0c3cf7d19cc719e16889c68e65e0884982a8bf47e03bb935f15"
  },
  "base_aldol_4_intramolecular": {
-  "intramolecular_aldol_mechanism.png": "fc778e9cf2e641f3f57f51f14b4eacc5072b46d548ced68c062abe992f829667"
+  "intramolecular_aldol_mechanism.png": "4e9bfbc5d7be8db5f818c9533991d162ffab6bce08a2e9f4a3560c9842c709a3"
  },
  "base_ord_arrows": {
-  "kinds.png": "48d6474edd2fe9fe715e91d7374a7dae0b7ed66b7136e300ca5ba8d440f52d78",
-  "vertical.png": "164c933a2138494f2d6e3510bd13586243595c8375a166d220082d6124bccbdc"
+  "kinds.png": "4d3c51813c6ee08c752bcd9fc9269e1385516117b4d7eab1d954b93513680007",
+  "vertical.png": "586c362801ea4aac63d5aff8ad4fa9c8080dfd7d27c02355d7e6554e7c6cc4bd"
  },
  "base_ord_chair_newman": {
-  "chair.png": "6197bf21aae540a75d71b7674bb24a7d736af97338d1fe8e5851dbf79ef1cdab",
-  "newman.png": "20bd34dea3e3b3dc330ff060f133a4a51bd2f83da5e3c826309ba4d57ad939fe"
+  "chair.png": "aa4d9e7235b8dd56b89bfa94632ffe26e98c8465e5518f884f9d1153a6ff8a91",
+  "newman.png": "c4e980c22b06096c7621c6f40b1d519e32ffc1911aaa4d1abb91782022c405bb"
  },
  "base_ord_charges": {
-  "ions.png": "63e4619af70f1f277a244c4f506e27c0bd8780fe3ea725f907b1824b149c3874",
-  "marks.png": "9977ade7d4781154a7512825536523a9a9b6d2ee2cbd74ea90e25aa89c482806",
-  "plain.png": "9945c09f7b4a24f651acc07d467e95a1194b42da3edbbc5233c73762c1283473"
+  "ions.png": "0af6526cb79a96426b25cd6f37c2ba07635a862e9d9ebb93a28877b82c5a1577",
+  "marks.png": "e050b8dda21b26b62cf702b869ccb4dfe0542570ce4d3edc9ac6999ee1b2e997",
+  "plain.png": "33043dafc1913e3b0a2a6115c13dded877b8aa772c9cbe338ce5006c41e584d9"
  },
  "base_ord_cycle": {
-  "suzuki.png": "9a7cf5151c22949dcc4bc9fc71b11f35b396bab831c0710126a33e35d83c55cd"
+  "suzuki.png": "9753c057d41afe73bc0436d271d201ab8372609eaeb6609c908bc53e9c028058"
  },
  "base_ord_mechanisms": {
   "allyl.png": "995f66d6561b271ed6143000c4f716195627b49543ab1ce9b9bee5e949afcd69",
   "grignard.png": "532ef51d029a0f3d3b6b5b23d657a6aab6610cad2173dd96b3e19a32083195c4",
-  "radical.png": "ee7c8a2d303285f1839daca012ff388bd820a41e43ca755484f5fd8a1cfc17b8",
+  "radical.png": "aa437ed8d5b8c9aa88d6696803ea010217fd78bf71da128a8d9334d4003a3dad",
   "sn1.png": "414916f3102814d9d19abb332786b1d4761d20a7697f090e815fe06a2eb8ddf7",
-  "ts.png": "3f3241ecbfcda15906512f75c163e85c067c1f4f1b4e56c871a1562cd6953e1a"
+  "ts.png": "4eb1627a622ea4da060a3596d0113d48cceae67eb9ab5c02ac8cc0d8636600d5"
  },
  "base_ord_metals": {
-  "eta.png": "e5087f3e4d6552997a5062cbeb7186e5f819ba3d44a4fd18c9a11d7dedc65f4a",
+  "eta.png": "91ba4d93bcb1ce28a65a932cf7784b4e9aae295427e390085558fae7ca854e19",
   "geoms.png": "d156705ecd86948090d8b21826fbd2e7b85f19176ea518aa8dcbf7ee386bc237"
  },
  "base_ord_smiles": {
-  "smiles.png": "ca3a1b9103a0343adca47f2279beebc7c9b1ea22724f85f92a42b63a801758f6"
+  "smiles.png": "4b961c77b4ac83ea007be90bd5bf798597fe7f44a5966980fabbf974f1d626ba"
  },
  "base_ord_stereo": {
-  "butanol.png": "3e486de939cfaf6a2ddf8a6b42989e614232ea07e1ef4638b11628ba23a16de5",
-  "ez.png": "ad9ac506ae517778fd13c32ff9a2a8b00bdc9b37d7141371bf65f9da287ec2fc",
-  "ringstereo.png": "0ec65380e90e5d103deabcaabe1de243574862aefd47c3453c20b1339e91fb55"
+  "butanol.png": "161459b6729e6752c25d39b85185a01d90b85c811ac3aef9f6f9ce4e2c827bee",
+  "ez.png": "a2c42e81f9d70ee32110bc516310e5c1cab8f11618e343f8a3e5fc3b69764b93",
+  "ringstereo.png": "dfc24200fd45c0e6f3a60be98869f038fdb78342e7de5c8cb84e4f8dae42e6d9"
  },
  "base_ord_structures": {
-  "chains.png": "38fee6dacd6bc557f946b4e6de6bad8fef0ef5e01f273602268749021af359aa",
-  "fused.png": "9407618a673ac656630495386562ae2832076d03d70157c314a90c89605ccd70",
+  "chains.png": "c70a6a784f09f0e1d5cf3c5fc094066d51821091a2713b435cd7b5d6aa48884e",
+  "fused.png": "db96f245f52c30bdc715abbf4f026708f58e7e89bdb3917ef12a1fa5350b49f4",
   "rings.png": "d53fd9a55048cd97d583cb7dd28def9a4a46892b7e7f5b356389ad43944bccbc",
   "spiro.png": "f39e57b3046a7742349aabbdf69dcbb66765a612becc7510cf9a4bba03c6f611"
  },
  "base_ord_styles": {
-  "acs.png": "b51de58286cdcbbcad80a06510cb202a38b50f7b8202970812d726aeeeb7025c",
+  "acs.png": "14652ab77539e7b64df179a04146970cf1277501ae99d4f812c85a44200d6959",
   "bondstyles.png": "a42c21804e139f3541f6b4357223e4ca8f283fd8c6e90fad907b1c42b2d27d41"
  },
  "base_repro_1_aldol": {
-  "aldol.png": "b3b69859999fea272d6d9ac34d9d2dc43b74981ab9b4151fb9b7168433f044f4",
-  "mech_naive.png": "b075f82c316f1f5541a993d03a080862215ea4df57e0a6d4b455198d5eb94b5a"
+  "aldol.png": "205e455ad7c2e26f69b62160dc698a83781c08df0f1f121fe78a5a79e5bad658",
+  "mech_naive.png": "21f80ae19c7de04220acee110fc8441e34b0ebe9b3034179f7d676b2417d35f7"
  },
  "base_repro_2_battery": {
-  "add.png": "0e4c040c99945c180acd92192da4989e8b2f0d96424d0be6c4f50785e0a88a09",
-  "chairs.png": "9ec280c4e2afb0d6616d0b7c88d36ed49680a203fc5fa906c7280060d24a2842",
-  "cyc.png": "32379a27df819f6f159854ed8100a9901475de0107b4216159a67ed416679419",
+  "add.png": "94fce582e15c1916ec347621aaa84d72b0716a7f96ca884c96679e17f17e38b5",
+  "chairs.png": "1f82f3527a87109c52b4ecebe16df40dce1ae28bbddea93698a7fbf49a94a999",
+  "cyc.png": "ca2066b2a762c078fe82f8f705c73bbd29ef4763c3dc87d6b91a46d47f46ced5",
   "da.png": "5f231f83c7e869b6c9448681e2bccadf7b12c723d34eac0c16a5a726bb4c1759",
-  "e2.png": "77736ee7dd4bca663c2a64db13e648cec98334fd66977fba1b1d65947ca694d4",
-  "eas.png": "db2d87bd2d7a1ad9b0b931632df3a2d0d9b7ab2b737d7bddf0eb42090f6b11b7",
-  "ester.png": "c5f59f004343ee57d310a8161dedd7af8f52fbb8b40f7a642a3785e6896e3b70",
-  "radical.png": "421df3a1d156781ed26440a0b1441b93f3c35bae607ff9d75c684f1c97a08380",
-  "smiles.png": "03d290cf87b332ceed6489c1ee129d422475b3718f8b99dfb41f18e42da61f3f",
-  "sn2.png": "c8cfdd61596fceb5662b68a74612081965bee08182dc52cf4e5b401c930a3f58"
+  "e2.png": "db47ca0b2316aedcd4dea6c2787e1015f608966411107a015c837bd14732a079",
+  "eas.png": "11e4fe3bce42d2a475a4a00978ea8fd4f74549d59c69d91e1e17e794be09eed5",
+  "ester.png": "32dc7de4419fec1d0c8946073e47965b4fff309048c7d01c3118200260e7f282",
+  "radical.png": "8633f5ca92d05c648f6c1bc9d7c127a08603639058907011975abc6e68a60b8c",
+  "smiles.png": "52504c074eed9befe0015704aeff6dc561173d4b176e72b0b421e1d3ddcd0513",
+  "sn2.png": "227a1aab3621ba31770d15118b198b37ba2a66a2f01fab2be5654d129452ac11"
  },
  "base_repro_3_metrics": {
-  "arrowtext.png": "6ffabece83a4ab249298aed60b370e27d487a324d4b3900e212abea58acf7185",
+  "arrowtext.png": "105955ba56f1855a18aeac6f769b34160e492aa6ffca714fdd7be28fb2f7a6db",
   "atom16.png": "7b8dd0b87e5f9b34d63cf73a044091a71fe5dd2d799141c0034dfdfbf3835953",
   "atom16b.png": "7b8dd0b87e5f9b34d63cf73a044091a71fe5dd2d799141c0034dfdfbf3835953",
   "atom22.png": "941c907dcf6e6124ce2d9b1ae012ac284533573272efb49b1bdf63fe68926f32",
-  "e2b.png": "e4d85f6731d938746bedc1288114787bf9c94ff874b2a2b6a35ef5a9a21f0fab",
+  "e2b.png": "38715002fbb2523c51e6a508146d5779e4d4bcf85f09876d61910123330ea97d",
   "mid22.png": "941c907dcf6e6124ce2d9b1ae012ac284533573272efb49b1bdf63fe68926f32"
  },
  "base_skill_examples": {
-  "cycle.png": "57037df83612ac5438c8e65b24f22b606f737b6023e9665db88a2484042550de",
-  "proline.png": "7bf3dec4227076397a99fb86eedfbd82adc66562656de5a2a2b5414491db54ac",
-  "step.png": "ac7aee64b591800ab052829fd484e82acd57ea8517654b719709ad687bf998ca"
+  "cycle.png": "f08e2b1d35cde7628ba1ac1a098105e58eb65ca4764a138cbfa189f3eaa2a7e4",
+  "proline.png": "83e7f5c79f63bd38c71683b128563f91cfbe316cd232babe7d7650cb392a19fc",
+  "step.png": "ed02a93f17079eeb439eb58024745ce5dc2795ce7d68ddb9647bd23b79d6777c"
  },
  "p01_p02_attack_join_split": {
   "attack.png": "69c0a2059a14e75db47e515cf1e290728bf8f2fb1e9893f056c008a01b511477",
   "recombination.png": "ff87380133ba97466f242140ebcca66a8eea5e13eb749009e32e7db3bebd955f",
-  "sn1.png": "f950f79d12f0c9ea4c3b4df8049e1ad60c0d4b4858e76531eef38f36d1afc56c",
-  "sn2.png": "5fa714731cd3d5faf2dc0aa9957d478e5bbe0c089c614d5c7f0d2c151f30d17a"
+  "sn1.png": "bdf48c61bce1ca7b314a634e28cc04ae4112df328a0ee32b4879b61554b01393",
+  "sn2.png": "77fe50d380d87d00d40ade08cbf8f89ff5574fcc710e1b997481ff759ee21695"
  },
  "p03_reversed_labels": {
-  "species.png": "abbd95f2739a10d3e89bba18d28d803de2e45b77abecc7c5e83452f8efae0f29",
-  "substituents1.png": "730660267234bf32d3ea88f2c04487a95ea1df6c33a1c4471825ffb77f4cda12",
-  "substituents2.png": "501a534fcefb9ad333561f55ff997a6bcea69b38ffc645e43c04dc9f35921a2e"
+  "species.png": "3340c0c3e5a5b866992990fa9cf5e937c55441760c83f8250b6b90b64f29728e",
+  "substituents1.png": "0cfa078f127aa48d471fcb64a455d46926e862790d23b36fc783c751b35b1bc1",
+  "substituents2.png": "c56281926b3c2a4bd0a96ddb4df7884f88374217baa03a2969dc8070e14e0559"
  },
  "p04_arrow_text": {
-  "conditions.png": "33a3c6c25ef2ba62907a07eb32a6c3d369529103c7b4210b533f8746967574d5",
-  "symbols.png": "bcb10c035cbc8465d5e4c22e41ee659c4d326024492a68d10a4fa1199418e166"
+  "conditions.png": "64d16638a1ff79c2a3e0a713ccf765208ed41d2aca367b8309fc0d9af45e8e5d",
+  "symbols.png": "119a9622422f505fcb456e8c388668aaa846e9b76b579978f262a3b2236ef49a"
  },
  "p05_curved_arrowheads": {
-  "cycle1200.png": "5f54ecaec65d3982c573e9df678b57e4e91917e8b01164ea45dbdf0d91974365"
+  "cycle1200.png": "59d2cb34f87bcd942308202460a0866f3e9bf67d04316abaeff79429d64bcb53"
  },
  "p11_p12_p17_arrow_shape": {
   "da.png": "82b72be1ead95434f79eb99f869c23fffa50652e8b6da32dd41abf2cf3da73c8",
-  "e2.png": "92b96a9296a62a17c73aeca3b283990b31442fc75dbcef5069ffa51053221874",
+  "e2.png": "73c8aa9b2b24f8454d024488eeaf5f4992825e53bb0d91315e71f1931a8c1be4",
   "enolate.png": "936cabf7bdfaee312ef9d1b935e39a53377680f79bb18b9340b02b796589c82f",
-  "radical.png": "e1f6200420902bf1d82eab9fb6ed8380d1371f8dd16f66b8743b0a19a79884e8"
+  "radical.png": "4ed15c5cfcb21fd41348c6adc36923b490f682743b8b7e8e686eed9bb96df9a3"
  },
  "p13_p15_reagents_and_tidy": {
-  "acid.png": "71800d700b8154fbb40bac9a0e7a8c768f7c49c1330afd47fdd0023d3712179e"
+  "acid.png": "703f9f2091b40136b32973d4c7edcd2f1c5c34247a7b72fd8629782b9845fb6b"
  },
  "p14_row_centring": {
-  "captions.png": "82c09a7f30c26b80faf972b14bd7c0b0eb31ed447f1fe8def6a990c4dee5823f",
-  "docked.png": "97d57f99e897fd9d5abbe608010f9c3aaf9252c79bbe77d9639aca9641d76faa"
+  "captions.png": "0a89df279b803a1251d96bdb7145e150522cb0b6a782958450df571a43df62b4",
+  "docked.png": "6ada3bb07a8ab0ded493fc65a05ee45c4c6bbe51f8073ea4ceab6af57e3e4d8e"
  },
  "p16_labels_colour_output": {
   "chairs.png": "8f0b758708e413f321615dd73b0dc46a9c6da3e86702079d17b46bf7fb56ab45",
-  "colour.png": "fad1beffe90fcc931cb10339b7d9e4c70d9b855c125d7b5c28ff4bf83f3a3d26",
-  "cycle_inout.png": "c07a67fa7fa4d58a531095d599262056084caccf270b3f00e1d86adc280e86aa",
+  "colour.png": "0854673f4f0cd42163d829cc1e40f22d99aa9d05e4e0f068cfe0dbca532cc2a8",
+  "cycle_inout.png": "6699fec90073ec242f7c83bd207e7084de3d6206a0eea587ad5f483e7bb3b59c",
   "labels.png": "4ff4a1491db4f24d22b03daee6b8701f9fb601e2c241fd35b29f9263d0323d1d",
-  "ppi.png": "bd5e47006c00e0d1ad2251364b50a54f1ab45ef5715ddb8adb65de0e4932dba1",
-  "ppi_px.png": "65c95d7a91294e4e0c51c7ae0514d0f68f19457d5c2cd8357e8193e881d058f2",
+  "ppi.png": "52e24c20812603976b7a98ccdcec8b57c54b3c253513d10e34c6b7a598799862",
+  "ppi_px.png": "1d9da51e428b27b0690544840f5a9cd8b931d62951383417bee0c13647125c71",
   "rgroups.png": "c9282a08cbfefe88a99d1ac32260cf96f07f29eddeed4175dfe15ea568a298f6"
  },
  "p17_rings_hybrids": {
-  "bent.png": "a7c872dcb35d2b32d808c53d7c95b4fb9965c86cd00026cd3db5889ed634e5e0",
+  "bent.png": "39dcba2c1161626786d759c8eb9ac54cb3521aa80e962b8b89943c0ec811bd4b",
   "hybrids.png": "e729ba6583120f70a7ade6c88f7658a76eb77f840bd4f726d7cd3da085b524de",
-  "piano.png": "9db991cb2cc169ec94199cc478172a3d4308692484c1aeffc1b75efc6514ea70",
+  "piano.png": "65ee4263a00da4069fef5390e654a02f27d36ca1d65deb041646132eee54a9ff",
   "sandwich.png": "1f7bb73c4b3e4fff6cdc8b6e2303af76aceb3f7592e8ef0a31a4be15a1078801"
  },
  "p18_balance_flow": {
-  "indent.png": "4dbe8b9edf7476346dcdad1abe3912df55b501cb287c3d1ebf1e7acb2aefe3eb",
-  "squeeze.png": "de0088feee70254e89b505e43578200f54f29a442c0be99ee788762a699b8d35"
+  "indent.png": "4d5663acfcffeb025e018f0e43d5b64c0143f6c70ee90c40232eac4260228825",
+  "squeeze.png": "3efbe9b1a5e95dadb834c0cc3d3125627941f19bcbb0b76c59479d72cb45e940"
  },
  "p19_molfile": {
   "sup.png": "e7712ceda679fe3a34dafe66c0cbe267ca401b782618d7dae1555875ed1a36cf"
  },
  "p20a_rebuilt_aldol": {
-  "aldol_mechanism.png": "73675932bebe41df4fbfdb33bb7d90eb7f3c57e364274dca3e84ac8b9a42401f",
-  "aldol_scheme.png": "b02918a9c4c88c6db477581eba7437e965af5b6631b6b9870c84d4f368232e5f"
+  "aldol_mechanism.png": "1bdeeda9713c2c53f4151b9c8e5a6a78097054061a72ee85d87d61db1114b839",
+  "aldol_scheme.png": "313538515e45359c13ece41c49b7aee2cfae2f989872ac164d6159ce9726dc18"
  },
  "p20b_rebuilt_crossed": {
-  "crossed_aldol_mechanism.png": "28853e6dd88c0dba5dcfb4f3e80ab97892075251ae7483026a5cced41a28b611"
+  "crossed_aldol_mechanism.png": "dff82343210e8a56ca4fadcdff92b110b263b3d20b5d9d3b064c77464503c9b2"
  },
  "p20c_rebuilt_intramolecular": {
-  "intramolecular_aldol_mechanism.png": "360cf66a52d50160840fac66c49495f87839eb00aeb019a1b766418902cc3d30"
+  "intramolecular_aldol_mechanism.png": "57c6232fbb5856af64e2ce7349cac92b0e5bbb1218642f27478f752eab86fa2a"
  },
  "p21_examples": {
-  "conformations.png": "1603946d00f22a030190d235d96a28cc0c345d342d18bf528b4e56279e95697e",
+  "conformations.png": "ced15a23fd7011ffbca452c720d5f4098ec7a03eb1621b73b9582a7c8d49d275",
   "diels_alder.png": "c74168a1ab84e8edd01bebc0b1babafcbc3e4409e54d4521093bad0c3a411ae2",
   "enolate_resonance.png": "9a5928bec3e689aea2e656200ec8fc9b49d42aaeb21d744914cc6c072fd8e92d",
   "molfile.png": "f13aaa15623f22f60d780e8d0a3ad944b4d55ee680311e9f170f7445660fbfe4",
-  "organometallics.png": "7134f42dc5cb053ad4b7b60197f335ac713aaa1da2b40626dd950b5683070e7a",
-  "radical_chain.png": "dfab8ec001a2589886e5dda54fc1bab06a9abacfd7cdc8ea39f28b32db6cf0f7",
-  "saponification.png": "c6e75d4c70ee8e3bf73b9b55748d16cd3fb554763311593278f7b5bc60a93d3c",
-  "scheme.png": "e1530b966ca358ed40271d219f0cd36096160161fa5b85f8547095dc9ad5af5b",
-  "stereo.png": "2c9f746ac89e25f7cd6a3dbcf95274cf9ee3cff5f6b2ad5d3eb57ef4da079b8a",
-  "suzuki_cycle.png": "a2763a94d381f72a1f9dc02921b16f5577613a16e0d5ff50eaa85fd1e2162afc"
+  "organometallics.png": "a18113d041ac6eb15f0f36377a1dbd0d98ad09228e8a402fe3fae56084584bd7",
+  "radical_chain.png": "4dd9d3adc08f5134e141564a485a96db7bbf4bd8785ed4289c7c2f4baa63ca42",
+  "saponification.png": "316a4d5d095c399baea47a18d5f665a3208881d06474749afe202b2e9413112e",
+  "scheme.png": "6786338a51318eed16daf9c47929709d28b668496a41a531e012edb01da7d17d",
+  "stereo.png": "8681354a25e6c2dbe2e595cb2deead1e59814325dcb9f12cc19f4d9393855d28",
+  "suzuki_cycle.png": "3679d5c281ad6aaa3300b401615267f8eeba3876dcf73e616d0dcf1b92cc15a2"
  },
  "p22_detail_gallery": {
-  "arrows.png": "e3d8d6be5bf7fc881be7e4ecb178dc0f4b37b1967dd5368bd84933b3fc183628",
-  "bonds.png": "fdc8bdeccfb5aa69f8b9a82b9f370fb87fb1c2ca3b07ac066ed41d0f6cd4fb8f",
-  "curly.png": "68e6102917526c49576191881ec13b10eb6b22eef8eecdaf77c9c7b51c0855b3",
-  "labels.png": "3e35a9e65207fb2b2627eccafe64ef263881c38429dcf9d3f5889132751fe861",
-  "marks.png": "0d207f7b5b7d437ecf574034ffaba57d59dbd1f48046c76c27e9f513c772a558",
-  "ts.png": "0b6cac13e6200735799a045e8b14fec745a6b9fd714ab1362395f8e1e6470681"
+  "arrows.png": "d6ede778de24df7762ed85dd83534da267dadb7ec866a6b92c64001e4fbbc9fa",
+  "bonds.png": "43a137a2716ac5ddad7b532d4d4a630adc8c3131969d5c2b5a2a04a5171b487a",
+  "curly.png": "e83cacee4b2a1156b131cc40fe57a671aa1dddba7c49bc3d89a45c95356fc0d7",
+  "labels.png": "84d8e5464bb1628d12cadc9572274d5ff0a9c642542aa605fee7c8a0378caa11",
+  "marks.png": "5dadb00b186c960e6461f2237a9438328d0423c14e505a4723cf0208fbce9fca",
+  "ts.png": "218e4ec574ab3d098381d5808fdcd7565fd625ab0ec261858ed079f813c0ea2e"
  },
  "p23_arrow_reagents_text": {
-  "kinds.png": "f02efe94ae1fc677179418893991f632c601b27a4fcd51d8e0b6a9d356ebcc37",
-  "reagents.png": "4685ff320dceb6c700915f64b65cbb913cdc32393d054e7ee322e98f9706a747",
-  "typography.png": "ec2546cbfdac3fbb754a3c56e5abe260ba1c04d8a199754504eef3ca45cf61a8",
-  "vertical_kinds.png": "ea651e36a029ed29e81d291e8df232a8709cf8137bc701e4b97815b3aad022fd"
+  "kinds.png": "33c463b2815b65472940c4ff6603bf795da969c6d0666387e6071d2580aa0761",
+  "reagents.png": "629eb62e8e6dc18f278ecb4b7ca2251f8a44081535dde73b3945747e0a83872f",
+  "typography.png": "ea1445744f30f6f2858dd6fda7c961a138678d48f5ccc50e14ba704de9eefb99",
+  "vertical_kinds.png": "dec95c98102cd98758cb8c0b49a67e23e0a4e8b95226b60c7394892abbf85b5b"
  },
  "p24_bases_lone_ions_gem": {
-  "cyclic.png": "a1cb50a0628466aa353b928f899a8d22c69d448589e16cb1d990df1d7fdfea3c",
-  "enolisation.png": "d38ff86b0ea28efe001dd865eee641e0020e2fcc5aaca2274b4678dc3ddd5b07",
-  "gem.png": "5a2aec9509b226ae8e05ea12dd5167b6ecb40bd7d32ca5c69e9c17e233f28de9",
+  "cyclic.png": "a041973ea538142d2fbba9cf2fef2f98ef69c7a5ceaba6440f27b5ea5b36fa0e",
+  "enolisation.png": "6737267f022f4141d623fb67887cf288e075101d04bc2bb2ca511be6672c8e5c",
+  "gem.png": "7da1372114bdc142d5fb7aed300ca9d6e520d5c4ac8e9f6f7d5a2e5402702db8",
   "ions.png": "991dfe496eae3df2f3ca6ec456e03b37c31546f276784394d9b85641ab620c73",
-  "reversed.png": "5c382b5c39662b6bf0b354f77844c1006c2d5c9134a98a95dcc358b7a40fef64"
+  "reversed.png": "635daa7e0fe2fd8d3aa3057aae56afdf4cd42842d071695afae850e24f2f5dc9"
  },
  "p25_smiles_groups_like": {
-  "gingerol.png": "3c0dfd91220430bf32d41848d6a1b422713508951599ef511f8e76b854c3d7ae",
-  "groups.png": "19f04aad5d476a7b2111e58cd73b85fdddba12d584b6523fda5c25615a3d840f"
+  "gingerol.png": "217c058a25ed85f2992d40e83c7de5172d970b91ef44f2477d924c11597a4255",
+  "groups.png": "8f426e45df8515c79c6180b917c05ab520b0c6b6268b41a1e1df274e5be38b0a"
  },
  "p26_teaching_marks": {
-  "crossed.png": "33e774a0d0589bc46fe8991b26cfde65b126363320d4f7763037cbdbd56177f6",
-  "one_site.png": "14cc3def39ca09227e92d4ca3f13a7955ab21ee7aaf7b00c886dff7d6f77187f",
-  "two_rows.png": "21431dfc0f519d0677611d779d2892e25d86a40b134e18dbef9a7c4f9f6abde9"
+  "crossed.png": "7afe227051386b8890f6dbd9cc4a43e66644063ee8535bba53d6c713bfde60d7",
+  "one_site.png": "f1e24b2778ca162c8229fb4f9fea17a00fb6015956a508eb70579b5ebca0bf30",
+  "two_rows.png": "9ee1be95b21f09930c695dbe69bbf1f8f6195a6173b0081a8464887b7297e477"
  },
  "p27_numbered_steps": {
-  "compare.png": "1c789db4bd2f97052ebf7a37fb6f5b407214f42d3e03921cf1f2434dce85c74f",
-  "compare_crop.png": "3569d042b5614ad1ad52bfcae8f7fd984f0a5f53a7f2ec648dd75b5af91f7700",
-  "numbered.png": "b96122c377eb2ebb04736729acfda5bcd3c09e819278a3be2dd6a7ccc63d5d75",
+  "compare.png": "f726b00d5e9852dc0fa2b8a9e7a7a395253add4b6057aeddbfe7968fd39e0366",
+  "compare_crop.png": "f3a99fad1e0804d98a25e03338b5248c212583a164092bbcb132a3cc0e4128bf",
+  "numbered.png": "2bfadb5860ad3239070b9c0824e52b3b39f8e2bb806213ddc17aa1728ea7e5c9",
   "numbered_smiles.png": "5ab432829f146b4e98c7c87518f36c46426e201a756a3f2853a6969d28e8186d",
-  "steps.png": "94708a74763969497f15f8eba744e388159292ed78499e0b08e0671b7d5a1705"
+  "steps.png": "eb954dbda3e54c1db6353da19884a52f2b3c1adfcd407881252e4dbc549f3275"
  },
  "p28_sketch_chloromethylation": {
-  "chloromethylation.png": "49bb20d5fdfb45200c424fda9fba051cb2a51d6a2a95094b5767151012d5ac8b"
+  "chloromethylation.png": "9c9baa279f913d201afb5e1eb2b2ce76a5180a918908088a424c49b592394952"
  },
  "p29_scheme_conventions": {
   "gem_like.png": "45258a50aaeb1a2e35f38edb763d66e4647c76031aca0ec2679e45cb8916c884",
-  "multiples.png": "8ee82d75a736961e6604770aacd1e3f2bc769f47a2ae1c6ac7c5d3a04c9a8b18",
-  "not_formed.png": "5f3df6998b3c3b8ea3fff9d3061ac20a362aec57909e8d2d9de14b2fb3089967",
-  "steroids.png": "ae7aa3de0d600dceeb07e6702b6f81d4be389707f6a4b4a0c60f487b33c87072"
+  "multiples.png": "a9e743ceebd52b8de0d320018964211e9b732eafbd5fc11abedbf9695d91222a",
+  "not_formed.png": "9f90690ad095dc39dee90cb02b8e7dff9969cd38e71c6b9a13a905bdaece8e3c",
+  "steroids.png": "78089ac9a6de7ac7ed72eba8ed6cffacfb14c5296d06440d6e32953f97868743"
  },
  "p30_molfile_natural_products": {},
  "p31_review_fixes": {
-  "callouts.png": "d635d9b5ded292f90c8a9b2f147e9e8ce9dd32d06258998109da8f868397e6dc"
+  "callouts.png": "2738d92973d1c4c99d45d6c693a140f01acb78d22dc1f0262d7c01ac3aa47895"
  },
  "p32_cages": {
-  "cages.png": "fd7021d65776aebff37b3a11915b35ca0209be6e352f79ba8709fe156d5391b6"
+  "cages.png": "408f06e09708a135a5cdb23e7ba56859a360c0a9dad1dbecbf5a35155faa1b55"
  },
  "p33_labels_pins": {
-  "camphor_pins.png": "40f954ea05fc652f9efd89fc995d2754856fd8eea1be400ce16c90e11d9c10f2",
-  "labels.png": "f57c5318ea4e85f6f74ef1f7f9ef4be043b2a7249f71e02025d250c0fd26ffcc"
+  "camphor_pins.png": "9b82904c6b30c4834b65c042490443db4a521ed9128ed372c2fdec7ffc3ddb08",
+  "labels.png": "29ef7c59d5c2e9e97ee1b18643acc9b5eba3907642cabe54b66c9204cf26ed85"
  },
  "p34_teaching_figures": {
-  "cycle_text.png": "c55030929109e884e19a5dae29a147b614d305d4a79048447f45cc9fb7b4c95d",
-  "dashed_hbr.png": "c85757a0a09ae90621ffbe6fd28e3ce7df608edf19bc3ed2914a5021281fda7d",
-  "eq_text.png": "9621f496e9ad1e952c3508fca7966739e4157421294dd87cc6cc6572d75d3005",
-  "multistep.png": "888d3a427d835b13e872407418105f84ba46949a3aee0beaf42b7d8a3313d995",
-  "orbitals.png": "b420a9090ed728e035fc230a23175cbc2881483c2180edb9892f6273c4d463ce",
-  "text.png": "17aea8c780e17bcc786d73b1110fce1648b9e3102b7f9c870d84d68605f9152e",
-  "valence_labels.png": "ed41f690afb9cd8cdb9819249e90319ab009a3175e9a6831df222c2ad964e8ca"
+  "cycle_text.png": "4cf55b707d59f8826909790722d8b5c2d9bdba417f6dfa70b04f3e0dcd570cd8",
+  "dashed_hbr.png": "e0cf7db031033bede88c428dfd0a23521c776061affdf714c0f278966198bbe0",
+  "eq_text.png": "9fd2c575bbf4e0b31a96f7a9743e6b008a6a5888cbf6e34bde9328ec9a79879b",
+  "multistep.png": "316f0e635d3eb69e978a808fbb9e13b45b678f6c54a7c9eb82b4e31d5cf8df09",
+  "orbitals.png": "849988241fc9f19092b940c14289629768e8a1540ccdece059904a90f075f8b1",
+  "text.png": "efe5e3af42b881faac563fc9fe2cbe825099abcab47afebf05c6f78fb3a14236",
+  "valence_labels.png": "6aa69ebd44cde4f38c2a2aa6105276da0a7f1482a0f5422a4c2dc5c9f8907304"
  },
  "p35_labels_text": {
-  "check_neg.png": "7fb644c7cea2930aa22e6f6561f0b9bafe9de0125e69a3b1d2687b4b88f98701",
-  "check_rules.png": "69518cd617e8c215eb2a66cc1bcef9b7f614533d5fd916dd2fbe7474f873835d",
-  "colour_text.png": "478738dd493a1f5e6f6ed0b2f12d8ecc016bdcc67ba4f977e2ddeb21dc5e4f30",
-  "label_bonds.png": "282cdb57008f83ec2de700d30620fdca1921a89eaa1832df387a096c3df85779",
-  "labels.png": "266c9d2e02ab4a6ff4388f470a8d5920e4db9aa0268f89aa308dcbc1c75bacda"
+  "check_neg.png": "9bca78190cd3e33ffec10887e7010c1123ee2efe2643bb5aaaba35912f2b774c",
+  "check_rules.png": "0879a7bab2e4c163a98af5bbb7b24ae2d9e2a8de6d883a3e2f572b856c5994c0",
+  "colour_text.png": "90bd6b5e3684f584f05dfebc5fd22ae95a7f306cbe96f5023739530c959d85f2",
+  "label_bonds.png": "ddf3949a14d4eb224a6aaf7cc525b39db403630978697fcb0809d65273348534",
+  "labels.png": "b698dea2eed5017842e14551bb86a12a6860539341a5148858e770c0e67d31a6"
  },
  "p36_arrows_mechanism": {
-  "arrays.png": "c61357c63a50f5a3579e9ff704416b2d81583ad37805806c507cb0101a51a006",
-  "from_h.png": "0df96f168cc6f3c390e9dc9a4ff8ca6583c072f86087d97ff7834f01db558a34",
-  "hooks.png": "fe16c71133b1fe6b4a0f61a5518f53e0d24bdf3f1607c7a220a49348a1bc39f4",
-  "sn2_shifts.png": "3ab67018a8f6c71a5d2d157752834171573a53bd49e7595f116e7c3024adee04"
+  "arrays.png": "c8ec13b5f89772220ea1de88aa390d457364be128076ba97cb5cccef0be0d711",
+  "from_h.png": "3689f4acf24752610e5c11222e486cda282afaabe9a12f00f5e4bfb2e469e6ab",
+  "hooks.png": "28d7a26cae34be737e9498e71d6c57e6f8b9adb3dac3a3c6c4c41f2e392935c2",
+  "sn2_shifts.png": "62ebafde61a7fc43744d96e120344cfe4d8eb43657ef19fd38cfadd3f34cf17a"
  },
  "p37_scheme_layout": {
-  "arrow_branches.png": "0c7a372951167f45893cb4343a6b86f1a0b9434cd9f95c1a0e6a2bec4b892ad2",
+  "arrow_branches.png": "e09a50fed8fa3d365196691d120cd079ca5e204980e18252ff5867bb9af2ab17",
   "bracket_count.png": "1377d55caa45af7fd674962b0d82bfdce68e8e7c069b81c122c9a0d6803a6790",
   "caption_gap.png": "f2448124a1a40db7f188ba98e7e66a2bbe034a5c6c1ac48151b76d1433150c82",
-  "caption_stack.png": "0962b3759bf309b95cec7d9e746f631db476767d212cf195b031448a9c000f75",
+  "caption_stack.png": "ee3a6aa04e694df687e59b7b1d16b316828687edc3efd49cec57f4dc1d854bab",
   "crossed_text.png": "9990fcb9474eee400d6427e0adf56441594d81f75aea65b9480bee2036156fef",
-  "cycle_features.png": "7446ff249216d6dc470cae57b5f31d57cb089859cefe845808924f4bf968a1d6",
-  "frames_headings.png": "efdceae3b739a4cab955458262cb49bc9b66d60b19375fa18a28fd0ae6470626",
-  "placed_arrow.png": "ccc067c8ef5aaaa8c8f1693b5c21d50319c899c0bc59a012323f15ccdc3dfe46",
+  "cycle_features.png": "36232213abf8b14eda8b436751fd9a755248c9f5706b769f4d2d6cbc0d5aaf06",
+  "frames_headings.png": "b21af7877b5040a446ad207f2c79fdcdf6716738ff40235a9eada31ab03dc36d",
+  "placed_arrow.png": "9b7b5a2f5a2578e4faf56d016710bbf89e4ec4b028d239347b6d5d8b5dc7fc14",
   "pointer_late.png": "edf6e97bc4e6f3a255ed75af940c058e4db2ec9fd70008875f84bd23a7e8e153",
-  "pointer_notes.png": "0638e98e2a465f4bf645b5b08bf7fc624ce55044e063c852d4649773767422e8",
+  "pointer_notes.png": "a007ad3c9294be851af8032b8df46cae306b5e16a6284d2029a8f5a3b9e3c14e",
   "pointer_overhang.png": "de3fb0d77621094c3c90d5b2d8038e6b39bb34ce25f656144c67e460076ca2f7",
   "pointer_short_callout.png": "1b95be2a6f3a50daab7fb139f55aab7ac9e64f9ff3cdff9b21d32d20190dbc5a",
-  "pointer_tips.png": "75b0436862427a60b03b969c61c6339f31594b34375da97c3fa5cdc0b2dbc1bb",
+  "pointer_tips.png": "51ba840dcc6a3035bf3a031651027f182cdd5068b0e052c099cfabffc6cc263a",
   "reagent_caption.png": "bcafb2a0f99f1caccdf83b4ed3fd92096db90bb5559e04cda15d5c1e10310098",
-  "unequal_eq.png": "4f275c07098d9034eb217ce60f118c7a83fdfbdfbacbedc427db7cf2fbcf276c",
-  "via_reagent_right.png": "1fc3c54a5e3d476eb6c87dc2335903b7313e8aa76cb3cd2fb55f4f4b98b41cd1",
-  "via_reagent_split.png": "5e9a5e9ec6b487c3a5d326b9a3cacad33c11671eb4eb93e6dba0dc240ddea9d0"
+  "unequal_eq.png": "0e6e369e39c50933d5c094ca33a1eb793009e8089a154a1ba3bda32f904381f2",
+  "via_reagent_right.png": "a09724b385c8696537a10291f8e5b005cfa6dadf05af467dddae10d791dafd65",
+  "via_reagent_split.png": "3308901f6ad16e48d37655aac012246bf42a276170ad20f2b68f6f641e63eb40"
  },
  "p38_marks_orbitals": {
   "carbene_pm.png": "e5d3214fae7fd705d5be9000b01cc3dc645dd844cb87c3a7f839dabdb5b44a1c",
-  "carbenes_ts.png": "7201f531eae4a768d4fa17aa330f3ca5e2d81b2ed766017e7217a3a0514979be",
+  "carbenes_ts.png": "cbc9e31cce1c380c90d184a3197b8d2802a40203d0e96351b092e3f6df8ea8ed",
   "charges.png": "8572c183895eb0853ab15fa74fee145f3800a3d43bd13043e95bc76832be98a4",
   "floating_wiggle.png": "28e21b64bfde85a3f88800f07926c6af9f1c613c6e196fdb98d3d226885ebf6a",
-  "halo_dipole.png": "3c90be7df6008b8f2c223302fe54b65bc57f00ea4225f3e112b6f794c9df95ea",
+  "halo_dipole.png": "a5bd8cd41cc8f87df8ea45c2f7994ee75789c7884a42142a9fa4de6342ca614d",
   "locants.png": "85a5f8a6ffbe53f18a85fca2913e994d31c3df5797af4f419997044cfc1653c0",
-  "lone_pairs.png": "b47a87ca7e982e3de35029b22d09eca446bc61f5de64f4f114803da5b13b446e",
-  "lp_label_lobe.png": "52462262ac5b3f859f66f7f8beae51362fd7c50001ba0031d965e01fe81be5d4",
-  "orbital_shapes.png": "fb7c21742d733318d653d9a7afd8af4cd837ae2459c71e839b7a51e63841838e",
-  "partials.png": "ab0365d93831d929a3f41f5900e3d2dc5173fcf9926f742e0cc6a85d9948b11f",
+  "lone_pairs.png": "1a6df46cb76248e9df2dd64c47cff56164d2ef67de3ed9e1ab10f884d04bf0d8",
+  "lp_label_lobe.png": "3db580fb9370bc746591ffb36678842d6b44754126727bf24d2f2b97714804b2",
+  "orbital_shapes.png": "83475d7ec43038a6a15a1208efd8b4c979bebf6f25255335232c735d6d2c2487",
+  "partials.png": "b549fa985f8c6ddfbe21b8984c6b8c845c50d04c18fef5d4603400d3045e67f7",
   "ring_anions.png": "8bcf1a2c237a7703a1c730fc7bb88cd40f53546bde8be480a20f6da7796ca0bc",
-  "site_labels.png": "c7ab8a036e220e30b3a7fa5c3ac56949572e960e48a5aadf4fa164fedb372dfd"
+  "site_labels.png": "c35862858476b7770878b7eb59b07fd8e542abccf48d0e5653a7d8e58a2fb3b6"
  },
  "p39_depiction": {
   "abbrev.png": "da0a13e9f8d830f2a4f233ded55de1bc507a03dfcdca48e1dd4a0b515cde76ca",
-  "angles.png": "42b6320b970131f2b29285a20884b4ceabf1ecb4e54aa18b2780a3e0ecec6dd4",
+  "angles.png": "6291bfe3fdf0274325347c19103122374099b1402ec5029ff0bf36def5d5d617",
   "checks.png": "bc530a813dbff6dff080ac90acb69ebdb77ec503b93d1be333c29cf5422f9294",
   "crossings.png": "1d6d789e06b868d82427d3c85f2e1314a38a9c71b15ae7c951626519d0faecbf",
   "cumulenes.png": "09e1dfb0ad32db4bf6bc46a01260b5649d9958ce371e46279070ed2b39e7b38c",
-  "fusion_h.png": "f4ca3b81e0e70ff48a257ddb2eaef1fdc9b3ebc8ef3e072b1a9cc7e929d48a01",
-  "pins_free.png": "4928cc121a4aa4471da851e3663c764abbb7c53b258e79b9037abff8cd47017e",
+  "fusion_h.png": "b867388539cb1a35ee04e5b4c65dc6a20b2e068a0dd9a0ae07f012962998da2e",
+  "pins_free.png": "a039afd4779bd18b2e6db9625a833ae1fdde34cf81f9f61460d1d4a609ace54a",
   "salts.png": "3861de3151bbcd51bebbc2673db8368348a53bee924d4d8055cce435d157771b",
-  "stereo_labels.png": "5524d3d77bf226aa48b1d3858dd93d73e1a1aa0c3c1208137b0401c885a3a5c3"
+  "stereo_labels.png": "44d1e1bc3afa876e43bad2baf8cbf3c497f6ea5727c1b954ad60d0f55d1f9bd5"
  },
  "p40_templates": {
-  "morphinans.png": "5315ce78169a08924ac967cd86aace1e06e1260abc77ef881a41e3dd169224ae",
-  "penam.png": "094c979cae74a5a1fd9299e5595063b2b360e6f1d599472d3962480ce4c0e6c2",
-  "strychnos_cage.png": "7805beed6f5f30aaa517243441b57f49f5f52b97e73b0bcadf50094272accfd9"
+  "morphinans.png": "2dac6328911b24666f74f897691d490f05bdc5275c741d2402f490215ed0091e",
+  "penam.png": "f413ceb111c57838989453ac398a79081915a8b247c29f2dfac38b12445a496c",
+  "strychnos_cage.png": "d8613989e5c83eee3c52f7f6f8f0967f0e3fd5cfd206ac65f78b59fca7129baf"
  },
  "p41_visual": {
-  "hbonds.png": "233677ec41435c446ee94816e13f253fe5f38d2998e305b51f30973bad3d6381",
-  "hbonds_cl.png": "e49c5da63af56b3645b81d946bbada069f6ebebb1de733141aea11fb9d0d86da",
-  "note.png": "75126c518cfc3053e2dc0be3645262bfef3d4d8e1e85a84343d2b8fd435a18fd",
-  "pairs.png": "3fa46a703e45d4a7921ff811e92c12ff508cb14c2feae555b9e6e06d06dd7031",
+  "hbonds.png": "2476c0afb9c075444fefb1e563639aef1f1eb5bf0ca2586cc46fcf6874850a9e",
+  "hbonds_cl.png": "be57d8b3a34e0bdf76ea6bbfaa59e260d599b2ef19b9d286f4482b74324dd98d",
+  "note.png": "f2ee010db1f0f6459b1071a63523d7fd5187b6cb2830373504b085fd75294fb1",
+  "pairs.png": "d0d03d769b6ff256fa0ab86c33734000369a8b5342860c9628b4aa37dfbc6707",
   "pi_cation.png": "a793650044ee06fda13c6459135f6ace65f81afb5ea52698feb997d98c0e154f",
   "ring.png": "3a0336de831010cab89d55ff3ea6aa9d386feb5eff5023bb5ab84d573f0ca2e6",
   "slim.png": "4c9b17a092362828b5a199e067f589f466731da9414d66300482b9ab9e940c4d"
  },
  "p42_review_fixes": {
-  "callout_curly.png": "19f59feadac0197d2c6657d333785ed6c83fd32eb2afb18156351d31c6282cec",
-  "centred_co.png": "b216370cebd7eb97181aafb78d6f065263e042988197bcb2ee45d1f8a2132a82",
-  "cycle_ends.png": "5ac3b6b47e41f084d853fa39ba4a39d6cc1b06393e40d1b072a93675fd1e21d9",
-  "lobe_letter.png": "a2b6cef46175d2a9f4c63d888cc184a1c386b4d5c5abf524cbe28b1bc1bd0de2",
-  "oh_untangled.png": "b79ba3f1ee6346736a2e3a7bfc003c56f434caa29b8a60578d619cfbb71ecd01",
+  "callout_curly.png": "54c8906aebd0abd29da123016a17ccf6fece068f57efe7a19a487815bd9b8038",
+  "centred_co.png": "a5ab738a27228a2021eeaa611075eaa77eee8182fc882215f483be79512a76a6",
+  "cycle_ends.png": "d747acce874c2ae604ec80520c1a30bc2d29296d376d743e92353f48a538aef1",
+  "lobe_letter.png": "e79e6094005fe08fbe0e84b47267bb5c3d5d5af7398e236827c73a1ea60c2bc6",
+  "oh_untangled.png": "109340f324a65ab1bbcb11468a002eccb06cc8bf1c51c1c0b7836882ba402c65",
   "wedge_row.png": "0ce8bf438857eb4937811dccef7b2e4c1553e9795f1944fc67c3f8ab18eda5a1"
  },
  "p43_consistency": {
-  "centred.png": "7c808c141d0b326e464454af385c236fc5fa1d390d1a221d9d417a447bdcd764",
-  "free.png": "90467beaa45d597041f31073fcc467f265268cb38411c05dd123260c575f26d0",
-  "ls.png": "6133ce9980ebfe1af9879abfd18eb016d44bce8a9cde2120adc661877ffc52f9",
-  "signs.png": "368a01b1b162cdc94b5f5080dbf89f98a066d629dbdb39957a8ef8bc95184fe4",
-  "water.png": "0ae1ea74abbefa4f9d6127da0b24c67caf59deefad920321eb16896703474dfd"
+  "centred.png": "070e948ca615acc074a531b882f0855338b7b0c43f0e47076060c3240667d9d9",
+  "free.png": "f8290d40d921f6344005b9ac774c2cb4c817e60e34292fba53a33ed8c6d94147",
+  "ls.png": "be8875f3d76ead39727d44229003cdcb942d5a69202de52adf0d9cadb94e4a70",
+  "signs.png": "a217e72c8aefbc581640755e26dcf96c510b9d82efce3950180ed41fc9fbc7ae",
+  "water.png": "712771c01fcb0d6a884119998200f6b28444aba982ad49840785c1c2c613433f"
  }
 }

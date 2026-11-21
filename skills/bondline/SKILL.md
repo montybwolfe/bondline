@@ -79,7 +79,7 @@ As B, from a clean source, including its teaching marks: site dots with Nu/E lab
 
 - **Geometry and weight:** 14.4 pt bonds (1 BU), 120° chain angles, 10 pt Arial/Helvetica labels, 1.1 pt lines. `Style(preset="acs")` gives strict ACS 0.6 pt lines for journal work.
 - **Colour:** structures black, curly arrows red (#FF2600). `Style(hetero=True)` colours heteroatom labels (never bonds) when the heteroatoms are the point; `m.color(c, atoms)` highlights a fragment through every step.
-- **Output:** one data unit = 1 pt, and `save()` returns the natural size in pt. The deliverable is a PNG at 1200 ppi of its true size. Give SVG only when asked, and a print-ready PDF with `S.save_pdf("x.pdf")`. Insert every figure at exactly its natural size (`width = w_pt / 72` in) and never rescale one on its own, so bonds and fonts match across a document.
+- **Output:** one data unit = 1 pt, and `save()` returns the natural size in pt. The deliverable is a PNG at 1200 ppi of its true size. Give SVG only when asked, and a print-ready PDF with `S.save_pdf("x.pdf")`. Molfiles work in both directions: `from_molfile()` imports a ChemDraw export, and `to_molfile(m, "x.mol")` exports a structure so it can be opened and edited in ChemDraw (offer it when someone wants to finish a figure there). Insert every figure at exactly its natural size (`width = w_pt / 72` in) and never rescale one on its own, so bonds and fonts match across a document.
 - **Symbols, not words,** wherever a standard symbol exists: Δ, hν, −78 °C (true minus and degree sign), ‡, δ+/δ−, equiv., cat.; ⇌ is `kind="<=>"`. Numbered conditions stack: `above=["1. LDA, THF, −78 °C", "2. MeI"]`.
 - **Labels** anchor on the bonded element (OMe, CO₂Me, NHBoc) and flip automatically (MeO/OMe); subscripts and italic prefixes (ᵗBu) are automatic, in labels and in text (H₂O, CH₂Cl₂).
 - **Double bonds** follow IUPAC and ChemDraw: inside rings; centred for a terminal C=O or =CH₂ on a carbon with two other substituents; otherwise towards the busier side. Override with `bond.side`.
@@ -106,7 +106,7 @@ As B, from a clean source, including its teaching marks: site dots with Nu/E lab
 
 ## 7. Examples
 
-`examples/`: 01 a scheme from SMILES; 02 a polar mechanism (saponification); 03 a pericyclic step (Diels–Alder); 04 a radical chain; 05 resonance; 06 stereo (a pair of enantiomers); 07 chair and Newman; 08 a catalytic cycle (Suzuki); 09 organometallics; 10 a molfile round trip. Each prints `check: OK`.
+`examples/`: 01 a scheme from SMILES; 02 a polar mechanism (saponification); 03 a pericyclic step (Diels–Alder); 04 a radical chain; 05 resonance; 06 stereo (a pair of enantiomers); 07 chair and Newman; 08 a catalytic cycle (Suzuki, with drawn aryl groups and step names); 09 organometallics; 10 a molfile round trip. Each prints `check: OK`.
 
 ## 8. Improving bondline (automatic)
 

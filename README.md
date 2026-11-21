@@ -7,7 +7,7 @@ Ask Claude for a molecule, a mechanism or a whole synthesis and bondline draws i
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/structures-dark.png">
-    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/structures.png" alt="Morphine, strychnine, reserpine, quinine, penicillin G and cholesterol" width="93%">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/structures.png" alt="Morphine, strychnine, reserpine, quinine, penicillin G and cholesterol" width="79%">
   </picture>
 </p>
 
@@ -20,7 +20,7 @@ Ask Claude for a molecule, a mechanism or a whole synthesis and bondline draws i
 - Orbitals, chairs, Newman projections, transition states and callouts
 - Redrawn figures from a photo of your notes or a whiteboard
 
-Output is PNG at 1200 ppi unless you ask for SVG or PDF, and molfiles go both ways if you want to finish something in ChemDraw. The same script always gives the same image.
+Output is PNG at 1200 ppi unless you ask for SVG or PDF. Molfiles can be imported, and any structure can be exported as a molfile if you want to finish it in ChemDraw. The same script always gives the same image.
 
 ## Usage
 
@@ -37,7 +37,7 @@ Once it's installed, just ask:
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/mechanism-dark.png">
-    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/mechanism.png" alt="Robinson annulation mechanism" width="100%">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/mechanism.png" alt="Robinson annulation mechanism" width="85%">
   </picture>
 </p>
 
@@ -46,7 +46,7 @@ Once it's installed, just ask:
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/synthesis-dark.png">
-    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/synthesis.png" alt="Takasago synthesis of (−)-menthol" width="92%">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/synthesis.png" alt="Takasago synthesis of (−)-menthol" width="78%">
   </picture>
 </p>
 
@@ -55,7 +55,7 @@ Once it's installed, just ask:
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/ferrocene-dark.png">
-    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/ferrocene.png" alt="Synthesis of ferrocene from cyclopentadiene and its acetylation" width="96%">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/ferrocene.png" alt="Synthesis of ferrocene from cyclopentadiene and its acetylation" width="82%">
   </picture>
 </p>
 
@@ -64,7 +64,16 @@ Once it's installed, just ask:
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle-dark.png">
-    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle.png" alt="Suzuki coupling catalytic cycle with Pd(PPh3)2" width="45%">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/cycle.png" alt="Suzuki coupling of 4-bromoanisole and phenylboronic acid, catalysed by Pd(PPh3)2" width="57%">
+  </picture>
+</p>
+
+### Orbitals, conformations and a half-sandwich complex
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/gallery-dark.png">
+    <img src="https://raw.githubusercontent.com/montybwolfe/bondline/main/docs/images/gallery.png" alt="p orbitals of a C=O pi bond, the tert-butyl cation, singlet dichlorocarbene and methylamine's lone pair; a chair, a Newman projection and (benzene)chromium tricarbonyl" width="53%">
   </picture>
 </p>
 

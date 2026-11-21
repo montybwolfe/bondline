@@ -1118,7 +1118,7 @@ class _SceneArrows:
                 if need > 1e-6 and (worst is None or k < worst[0]): worst = (k, need)
             if worst is None: return
             for it in items[worst[0]:]: self._imove(it, worst[1], 0.0)
-    def row(self, items, x=0.0, y=0.0, gap=None, under=None, align="center", row_gap=0.9, via=None):
+    def row(self, items, x=0.0, y=0.0, gap=None, under=None, align="center", row_gap=1.3, via=None):
         """Lay items left to right, each centred on the line y (BU): a structure on its main fragment, an arrow on its
         shaft, '+' on its glyph. Structures sit `gap` BU apart (measured between atoms, labels, marks and brackets);
         curly arrows and other overhangs only push the next item along when they would come closer than 0.4 BU to it,
@@ -1176,7 +1176,7 @@ class _SceneArrows:
             self.__dict__.setdefault("_rows", []).append(
                 (ref, [[g, g.mols[0].atoms[0].xy[1] * B - self._line_y(ref)] for g in items if isinstance(g, Group) and g.mols and g.mols[0].atoms]))
         return items
-    def flow(self, items, width_cm=16.0, x=0.0, y=0.0, gap=None, row_gap=0.9, squeeze=0.7):
+    def flow(self, items, width_cm=16.0, x=0.0, y=0.0, gap=None, row_gap=1.3, squeeze=0.7):
         """Wrap items into rows no wider than width_cm, breaking before a reaction arrow when possible (a '+' stays with
         its neighbours). Before a lone trailing item would wrap onto a row of its own, the last row's gaps shrink (down
         to `squeeze` of normal; squeeze=None never) to keep it. A continuation row that has to begin with an arrow is

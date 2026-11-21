@@ -5,7 +5,7 @@ validate: OK
 validate: OK
 validate: OK
 continuity: OK
-(np.float64(426.8298135831655), np.float64(166.51243599514518))
+(np.float64(426.8298135831655), np.float64(172.2724359951452))
 check: OK
 notes (deliberate near reacting centres? confirm):
   bond angle at Atom(C:C5) is 130 deg (use 120 or 180)

@@ -14,8 +14,12 @@
 - The + and − of text (H⁺, Na⁺, superscript charges) carry the same bar weight as the signs in circled charges. The
   font's own superscript plus was about half the weight of a letter's stem. A sign followed by a space, the minus of
   "a − b" in an exponent, is an operator and keeps the font's weight.
-- In PNGs every run of text starts on a whole pixel, so the same letter is rendered with identical pixels wherever it
-  stands. Two L ligands, or the H of two "H⁺ transfer" labels, could look like different weights before.
+- Text in PNGs is drawn at its true weight everywhere. The rasteriser used to round the square stems of H, L, I, E
+  and T to a whole number of pixels, so the same letter came out 3 or 4 pixels wide depending on where it stood (two
+  L ligands, a bonded H beside the H of H₃PO₄). Each run of text also starts on a whole pixel, so a letter is drawn
+  with identical pixels wherever it stands.
+- Rows of a scheme (`flow()`, `row(under=)`) sit 1.3 BU apart instead of 0.9, so captions no longer crowd the
+  conditions of the row below.
 
 ### Curly arrows
 
@@ -25,7 +29,11 @@
 
 ### Examples
 
-- The README's Suzuki cycle uses PPh₃ ligands, and there's a new ferrocene and acetylferrocene scheme.
+- The Suzuki cycle (example 08 and the README) draws its real aryl groups (4-bromoanisole and phenylboronic acid to
+  4-methoxybiphenyl) on Pd(PPh₃)₂, with the phenyl cis to the aryl for reductive elimination, and names each step.
+- New README figures: ferrocene and acetylferrocene, and a gallery of orbitals, a chair, a Newman projection and
+  (η⁶-benzene)Cr(CO)₃.
+- The skill says plainly that molfiles go in with `from_molfile()` and out with `to_molfile()`.
 
 ### Style decisions
 

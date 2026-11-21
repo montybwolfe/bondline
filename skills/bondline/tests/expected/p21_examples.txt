@@ -29,7 +29,7 @@ check: OK
 (np.float64(173.31761894534162), np.float64(133.60687460934233))
 check: OK
 == 08_catalytic_cycle.py
-(np.float64(204.33069599436948), np.float64(175.18148607370162))
+(np.float64(303.32339427267186), np.float64(244.36709084394812))
 check: OK
 == 09_organometallic.py
 (np.float64(194.2725103271892), np.float64(86.87786324159893))

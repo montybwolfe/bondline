@@ -132,7 +132,7 @@ bond), angles in degrees counter-clockwise from east. Every script starts `from 
   at=(x, y), label="B")` an empty answer box. `S.text(s, at)` free text; `S.plus()`; `S.ring_text(ring_atoms, "A")` a letter in a ring.
   A leading multiple in conditions ("2xLDA") prints as 2×.
 - `S.row([...], gap=None)`: left to right, structures centred on the arrow line. `S.row(items, under=earlier_items,
-  align="center" | "left" | "right", row_gap=0.9)`: a second row of products beneath the first. A scheme that turns a
+  align="center" | "left" | "right", row_gap=1.3)`: a second row of products beneath the first. A scheme that turns a
   corner and snakes back: `r1 = S.row([...])`, then `S.row([product, S.arrow(kind="<-"), intermediate], under=r1,
   via=S.arrow(vertical=True))` (the vertical arrow runs down from r1's last item). `S.flow([...], width_cm=16)` wraps
   at arrows. `S.place(item, at)`.

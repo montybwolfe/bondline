@@ -3,7 +3,7 @@
 ['OLi', 'OMe', 'OSiMe3']
 ['O', 'OH', 'OH', 'OMe']
 ['O', 'OH', 'OMe']
-(np.float64(463.9994455275594), np.float64(151.27994218333166))
+(np.float64(463.9994455275594), np.float64(157.03994218333162))
 check: OK
 == automatic labels: nitro, silyl, stannyl, boronic acid, sulfonates, CF3; none with abbrev=False
 O=[N+]([O-])c1ccc(C=O)cc1 -> ['NO2', 'O']

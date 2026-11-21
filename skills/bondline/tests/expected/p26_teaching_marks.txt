@@ -10,8 +10,8 @@ acetophenone: O at 90 deg, CH3 at 330 deg
 (np.float64(401.2875763326362), np.float64(98.32433612022322))
 check: OK
 == four products after one arrow: a second row under the first, one caption under each pair
-rows centred: 0.0 pt apart; row gap 0.9 BU
-(np.float64(298.13899701063076), np.float64(125.08708592357956))
+rows centred: 0.0 pt apart; row gap 1.3 BU
+(np.float64(298.13899701063076), np.float64(130.84708592357956))
 check: OK
 == negative: pointers sent through their molecule are reported
 check:

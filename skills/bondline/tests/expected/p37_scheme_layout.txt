@@ -4,7 +4,7 @@ caption under the brackets: True | count is a subscript at the lower right: True
 (np.float64(313.65781250000003), np.float64(53.86958001528724))
 check: OK
 white between neighbouring captions (BU): [1.0, 1.0]
-(np.float64(181.43947503697905), np.float64(147.04738338370632))
+(np.float64(181.43947503697905), np.float64(152.8073833837063))
 check: OK
 stacked in order: True | first captions on one line: True | joint below the own caption: True
 (np.float64(227.0962072545188), np.float64(116.94018718450442))

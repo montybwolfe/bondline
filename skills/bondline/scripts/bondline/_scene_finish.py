@@ -665,7 +665,8 @@ class _SceneFinish:
                 for s, x, y, sz, it, bd in t["runs"]:
                     if s.strip(): ax.add_patch(PathPatch(self.F.path(s, x, y, sz, it, bd), fc="white", ec="white", lw=2.2 * st.lw, joinstyle="round"))
             for s, x, y, sz, it, bd in t["runs"]:
-                if s.strip(): ax.add_patch(PathPatch(self.F.path(s, x, y, sz, it, bd), fc=getattr(s, "c", None) or t["color"], ec="none", lw=0))
+                if s.strip(): ax.add_patch(PathPatch(self.F.path(s, x, y, sz, it, bd), fc=getattr(s, "c", None) or t["color"], ec="none", lw=0,
+                                                     snap=False))   # (Agg would round an H's or L's square stems to 3 or 4 px)
     def bbox(self):
         prims, texts = self._build(); pts = []
         for pr in prims:

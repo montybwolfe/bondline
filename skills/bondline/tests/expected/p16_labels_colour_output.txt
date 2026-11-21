@@ -21,6 +21,6 @@ check: OK
 == output: PNG at 1200 ppi of its true size; print-ready PDF pages, split between rows
   34.0 x 55.4 pt -> 567 x 922 px at 1200 ppi
   px=1000 -> (614, 1000)
-  1 pages; second save identical: True
+  2 pages; second save identical: True
 == a reagent and a by-product on one arc: the reagent joins before the by-product leaves, never crossing
 check: OK
