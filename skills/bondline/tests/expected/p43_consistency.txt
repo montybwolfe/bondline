@@ -1,0 +1,27 @@
+== water: the O-H an arrow leaves shows as much line as the other
+(np.float64(32.38728510243501), np.float64(41.53919091745465))
+check: OK
+O-H lines (pt): [6.0, 6.0]
+== centred double bonds: the neighbours stop at the near line, never in the gap
+(np.float64(163.1252717186956), np.float64(54.74295712527345))
+check: OK
+Atom(C) - Atom(C) meets a line of the double bond: True
+Atom(C) - Atom(C) meets a line of the double bond: True
+Atom(C:1) - Atom(C:0) meets a line of the double bond: True
+Atom(C:1) - Atom(C:3) meets a line of the double bond: True
+isopulegol's C=CH2 beside the hash is offset: True
+== signs in text: never lighter than the circled charges' bars
++ 10.0 pt: bar 0.792 pt (marks: 0.792 )
++ 7.0 pt: bar 0.792 pt (marks: 0.792 )
+− 7.0 pt: bar 0.792 pt (marks: 0.792 )
+an operator (a − b in an exponent) keeps the font's weight: 0.499 pt
+(np.float64(110.60249999999999), np.float64(25.855109374999998))
+check: OK
+== text on whole pixels: one letter, the same pixels anywhere
+top and bottom L identical: True
+== free curves: the fallback for an arrow no arc draws clear of the ink
+(np.float64(32.941531628991825), np.float64(52.521249999999995))
+check: OK
+free curves offered: True
+all bend one way, 25-270 deg, no tighter than the arcs: True
+placed clear: True

@@ -633,8 +633,14 @@ class _SceneFinish:
                     if k == 0: break
                 texts.append({"runs": best[1]["runs"], "color": st.ink, "box": best[1]["box"]}); placed_lbl.append(best[1]["box"])
         return out
-    def _draw(self, ax, prims, texts):
+    def _draw(self, ax, prims, texts, grid=None):
+        """grid=(x0, y0, px per pt across, px per pt up) for a bitmap: each run of text starts on a whole pixel, so
+        the same letter is drawn with the same pixels wherever it stands (two L's of one complex, the H of every H⁺);
+        a shift of half a pixel at most, so nothing else moves."""
         st = self.st
+        if grid is not None:
+            gx, gy, sx, sy = grid; snap = lambda x, y: (gx + round((x - gx) * sx) / sx, gy + round((y - gy) * sy) / sy)
+            texts = [dict(t, runs=[(s_, *snap(x, y), sz, it, bd) for s_, x, y, sz, it, bd in t["runs"]]) for t in texts]
         for pr in prims:
             if pr[0] == "line":
                 P = np.array(pr[1]); kw = {"dashes": pr[4]} if pr[4] else {}
@@ -732,12 +738,13 @@ class _SceneFinish:
         elif dpi is None: dpi = min(self.DPI, self.MAX_PX * 72.0 / max(w, h))
         fig = plt.figure(figsize=(w / 72, h / 72), dpi=dpi); ax = fig.add_axes([0, 0, 1, 1])
         ax.set_xlim(x0, x1); ax.set_ylim(y0, y1); ax.axis("off")
-        self._draw(ax, prims, texts)
+        ext = os.path.splitext(str(path))[1].lower()
+        self._draw(ax, prims, texts, grid=(x0, y0, dpi / 72.0, dpi / 72.0) if ext not in (".svg", ".pdf") else None)
         if debug:
             for mi, m in enumerate(self.mols):
                 for i, a in enumerate(m.atoms):
                     p = self.P(a); ax.text(p[0] + 2, p[1] + 2, f"{mi}.{a.name if a.name is not None else i}", fontsize=4.5, color="#1565C0")
-        ext = os.path.splitext(str(path))[1].lower()           # vector files carry no date and fixed ids: re-saves are identical
+                                                                # vector files carry no date and fixed ids: re-saves are identical
         kw = {".svg": {"metadata": {"Date": None}}, ".pdf": {"metadata": {"CreationDate": None}}}.get(ext, {})
         with matplotlib.rc_context({"svg.hashsalt": "bondline"}): fig.savefig(path, dpi=dpi, **kw)
         plt.close(fig); self._last = (path, dpi, x0, y1)
@@ -773,7 +780,8 @@ class _SceneFinish:
         vis = []
         for m, b in allb:
             if b.style != "plain" or b.order != 1 or b.free or (b.a.drawn == b.b.drawn): continue
-            p, q = b._prims[0][1]; vis.append((norm(q - p), b))
+            p, q = b._prims[0][1]; U, L = (b.b, b.a) if b.a.drawn else (b.a, b.b)
+            vis.append((norm(q - p) + self._centred_trim(U, b, unit(self.P(L) - self.P(U))), b))   # (a C=O's near line: not a stub)
         for v, b in vis:
             if v < 0.40 * st.bond:
                 L = b.a if b.a.drawn else b.b
@@ -1458,3 +1466,20 @@ class _SceneFinish:
         for k, (lab, t) in enumerate(tiles):
             x, y = (k % cols) * W + 10, (k // cols) * 560 + 30; sheet.paste(t, (x, y)); d.text((x, y - 22), lab, fill="blue")
         sheet.save(out); return out
+
+
+def side_by_side(original, drawn, out="compare.png", crop=None, height=1000, gap=40):
+    """The original (sketch, photo, slide) and the redrawn figure side by side at one height, as a PNG, to compare them
+    element by element. crop=(x0, y0, x1, y1), fractions of the original, zooms into one part of it. Returns out."""
+    from PIL import Image
+    def load(p):
+        im = Image.open(p)
+        if im.mode in ("RGBA", "LA", "P"):
+            im = im.convert("RGBA"); bg = Image.new("RGBA", im.size, "white"); bg.alpha_composite(im); im = bg
+        return im.convert("RGB")
+    a, b = load(original), load(drawn)
+    if crop:
+        w, h = a.size; a = a.crop((int(crop[0] * w), int(crop[1] * h), int(crop[2] * w), int(crop[3] * h)))
+    a, b = (im.resize((max(1, round(im.size[0] * height / im.size[1])), height), Image.LANCZOS) for im in (a, b))
+    c = Image.new("RGB", (a.size[0] + gap + b.size[0], height), "white"); c.paste(a, (0, 0)); c.paste(b, (a.size[0] + gap, 0))
+    c.save(out); return out

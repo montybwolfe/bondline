@@ -7,7 +7,7 @@ continuity:
   step 3->4: Atom(H:Hw) moved 1.20 BU
   step 3->4: Atom(O:Ow) moved 4.72 BU
   step 3->4: Atom(H) moved 4.72 BU
-(np.float64(459.97902930045774), np.float64(197.18147351309005))
+(np.float64(459.97902930045774), np.float64(197.1435451317811))
 check: OK
 notes (deliberate near reacting centres? confirm):
   bond angle at Atom(C:C5) is 130 deg (use 120 or 180)

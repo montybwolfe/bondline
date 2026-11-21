@@ -159,6 +159,8 @@ LPCH = "\ue000"                   # a lone pair written in text ("B:", ":NEt3"):
 VGLYPH = {"→": 1.25, "←": 1.25, "⇌": 1.25, "⊕": 0.80, "⊖": 0.80, LPCH: 0.42}   # drawn as vector shapes at the house weight
                                                                     # (advance in em); ⊕ ⊖ match the circled charges on atoms
 _VSPLIT = re.compile("([" + "".join(VGLYPH) + "])")
+SIGNS = "+−"                      # drawn as bars no lighter than the charge marks' (Fonts._sign)
+_SSPLIT = re.compile("([" + "".join(VGLYPH) + re.escape(SIGNS) + "])")
 SUPCH = dict(zip("⁺⁻⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ", "+−0123456789n")); SUBCH = dict(zip("₀₁₂₃₄₅₆₇₈₉₊₋", "0123456789+−"))
 
 NONROUND = set("ILTYJ17ijlrft")    # letters far narrower than their cell: bonds and marks clear their real outline,
@@ -274,20 +276,39 @@ class Fonts:
         for P in polys:
             verts += list(P) + [P[0]]; codes += [_P.MOVETO] + [_P.LINETO] * (len(P) - 1) + [_P.CLOSEPOLY]
         return _P(np.array(verts, float), codes)
+    sign_w = 0.0                         # pt: the least bar weight of a + or − in text (Scene sets it to its charge marks')
+    def _sign(self, g, x, y, size, it=False, bd=False, op=False):
+        """A + or − in text as two (one) flat bars where the font draws it, but never lighter than sign_w: at the
+        superscript size the font's own sign is half a letter's stem (H⁺, Na⁺ read faint), so every sign in a figure
+        carries the weight of the signs in its circled charges, at any size. (An operator, op, keeps the font's weight.)"""
+        from matplotlib.path import Path as _P
+        k = ("sign", g, it, bd)
+        if k not in self._w:
+            e = TextPath((0, 0), g, size=100, prop=self.prop(it, bd)).get_extents()
+            em = TextPath((0, 0), "−", size=100, prop=self.prop(it, bd)).get_extents()          # the font's bar weight
+            self._w[k] = ((e.x0 + e.x1) / 200, (e.y0 + e.y1) / 200, (e.x1 - e.x0) / 200, (em.y1 - em.y0) / 100)
+        cx, cy, h, t0 = self._w[k]; c = (x + cx * size, y + cy * size); h *= size; t = max(t0 * size, 0 if op else self.sign_w) / 2
+        bars = [[(c[0] - h, c[1] - t), (c[0] + h, c[1] - t), (c[0] + h, c[1] + t), (c[0] - h, c[1] + t)]]
+        if g == "+": bars.append([(c[0] - t, c[1] - h), (c[0] + t, c[1] - h), (c[0] + t, c[1] + h), (c[0] - t, c[1] + h)])
+        verts, codes = [], []
+        for P in bars: verts += P + [P[0]]; codes += [_P.MOVETO] + [_P.LINETO] * 3 + [_P.CLOSEPOLY]
+        return _P(np.array(verts, float), codes)
     def path(self, s, x, y, size, it=False, bd=False):
         miss = self.missing(s)
         if miss:
             raise ValueError("the house font has no glyph for " + ", ".join(f"'{c}' (U+{ord(c):04X})" for c in dict.fromkeys(miss))
                              + f" in {s!r}: write it another way (Δ, hν, °C, −, ‡, δ+ and → are available; use S.arrow(kind='<=>') for equilibria)")
         gp = self._gsplit(s)
-        if any(ch in VGLYPH for ch in s) or len(gp) > 1 or gp[0][1]:
+        if any(ch in VGLYPH or ch in SIGNS for ch in s) or len(gp) > 1 or gp[0][1]:
             from matplotlib.path import Path as _P
             parts, cx = [], x
             for t, g in gp:
-                for v in (_VSPLIT.split(t) if not g else [t]):
+                vs = _SSPLIT.split(t) if not g else [t]
+                for i, v in enumerate(vs):
                     if not v: continue
                     if v in VGLYPH: parts.append(self._vglyph(v, cx, y, size))
                     elif g: parts.append(TextPath((cx, y), v, size=size * self.gscale, prop=self.gprop(it, bd)))
+                    elif v in SIGNS: parts.append(self._sign(v, cx, y, size, it, bd, op="".join(vs[i + 1:])[:1].isspace()))
                     elif v.strip(): parts.append(TextPath((cx, y), v, size=size, prop=self.prop(it, bd)))
                     cx += self.adv(v, size, it, bd)
             return _P.make_compound_path(*parts)
@@ -2037,21 +2058,6 @@ def _members(rm, c, drop):
         for n in rm.GetAtomWithIdx(x).GetNeighbors():
             if n.GetIdx() in drop and n.GetIdx() not in seen: seen.add(n.GetIdx()); todo.append(n.GetIdx())
     return seen
-def side_by_side(original, drawn, out="compare.png", crop=None, height=1000, gap=40):
-    """The original (sketch, photo, slide) and the redrawn figure side by side at one height, as a PNG, to compare them
-    element by element. crop=(x0, y0, x1, y1), fractions of the original, zooms into one part of it. Returns out."""
-    from PIL import Image
-    def load(p):
-        im = Image.open(p)
-        if im.mode in ("RGBA", "LA", "P"):
-            im = im.convert("RGBA"); bg = Image.new("RGBA", im.size, "white"); bg.alpha_composite(im); im = bg
-        return im.convert("RGB")
-    a, b = load(original), load(drawn)
-    if crop:
-        w, h = a.size; a = a.crop((int(crop[0] * w), int(crop[1] * h), int(crop[2] * w), int(crop[3] * h)))
-    a, b = (im.resize((max(1, round(im.size[0] * height / im.size[1])), height), Image.LANCZOS) for im in (a, b))
-    c = Image.new("RGB", (a.size[0] + gap + b.size[0], height), "white"); c.paste(a, (0, 0)); c.paste(b, (a.size[0] + gap, 0))
-    c.save(out); return out
 def _bridged_systems(rm, maxring=8):
     """Atom index sets of the bridged or caged ring systems (rings of up to maxring atoms, two of them sharing three or
     more atoms, or an atom in three rings of a system: norbornane, adamantane, cubane, morphinan, a taxane core)."""

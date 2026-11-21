@@ -1,5 +1,5 @@
 == long and stacked conditions
-(np.float64(369.22506363697545), np.float64(73.50803125))
+(np.float64(369.22506363697545), np.float64(73.49600000000001))
 check: OK
 arrow 0: text fits inside the shaft: True
 arrow 1: text fits inside the shaft: True

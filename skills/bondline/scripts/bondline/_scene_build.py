@@ -6,7 +6,7 @@ from ._core import *  # noqa: F401,F403
 
 class _SceneBuild:
     def __init__(self, style=None):
-        self.st = style or Style(); self.F = Fonts(self.st.font, getattr(self.st, "greek", "serif"))
+        self.st = style or Style(); self.F = Fonts(self.st.font, getattr(self.st, "greek", "serif")); self.F.sign_w = self.MARK_W * self.st.lw
         if self.F.fallback and not getattr(Scene, "_warned_font", False):
             Scene._warned_font = True                          # figures from machines with different fonts will not match
             print(f"bondline: none of the fonts {', '.join(self.st.font[:-1])} is installed; using {self.F.family} "
@@ -828,16 +828,18 @@ class _SceneBuild:
         if not force_offset:
             if b.a.drawn and b.b.drawn: return 0                       # between two labels: N=N, S=O
             if not ea and not eb: return 0                             # O=O, isolated ethene
-            wide = any(bb.style == "wedge" and bb.b in (b.a, b.b) and not bb.b.drawn for bb in m.bonds if bb is not b)
+            wide = any(bb.style in ("wedge", "hash") and bb.b in (b.a, b.b) and not bb.b.drawn for bb in m.bonds if bb is not b)
             if ((not ea and len(nb) >= 2) or (not eb and len(na) >= 2)) and not wide:
                 return 0                                               # GR-1.10.2 carbonyl, =CH2 (offset beside the wide
-                                                                       # end of a wedge, which a centred pair cannot meet)
+                                                                       # end of a wedge or hash, which a centred pair cannot meet)
         if not sa and not sb: return 1
         s = sum(np.sign(cross(u, x.xy - b.a.xy)) for x in sa + sb)
         if s != 0: return int(np.sign(s))                              # GR-1.10.1 side with more substituents
         inring = lambda x: len(m.nbrs(x)) > 1 and any(m.ring_of(bb) for bb in m.bonds if x in (bb.a, bb.b) and bb is not b)
         heavy = max(sa + sb, key=lambda x: (inring(x), len(m.nbrs(x)), x.drawn, -x.uid))   # tie: ring, then bigger group
         return 1 if cross(u, heavy.xy - b.a.xy) > 0 else -1
+    INLINE = 152.0                # deg: a neighbour this far round from a centred C=O is nearly in line with it; up to here
+                                  # the C=O's near line meets the neighbour's centre line and the neighbour stops there too
     _trim = False                 # single bonds stop at a centred C=O's near line only in the drawn lines (_build_ sets
                                   # it after the arrows are placed, so their solutions never depend on it)
     def _centred_trim(self, X, b, w):
@@ -849,9 +851,9 @@ class _SceneBuild:
         for b2 in m.bonds:
             if b2 is b or X not in (b2.a, b2.b) or b2.order != 2 or b2.style not in ("plain", "bold"): continue
             Z = b2.b if b2.a is X else b2.a                                       # a C=O, C=S or C=N to a label
-            if self._dside(b2) != 0 or not (Z.drawn and not Z.hidden): continue
+            if self._dside(b2) != 0 or Z.hidden: continue                          # (C=CH2 alike: no stubs in the gap)
             w2 = unit(self.P(Z) - P); n2 = perp(w2)
-            if abs(cross(w2, w)) < math.sin(math.radians(40)): continue            # (nearly in line: leave it)
+            if abs(cross(w2, w)) < math.sin(math.radians(180 - self.INLINE)): continue   # (nearly in line: leave it)
             o = n2 * (st.dbl / 2) * (1 if float(w @ n2) > 0 else -1)
             M = np.array([[w[0], -w2[0]], [w[1], -w2[1]]])
             try: t, s_ = np.linalg.solve(M, o)
@@ -910,7 +912,7 @@ class _SceneBuild:
             M = np.array([[w[0], -v[0]], [w[1], -v[1]]])
             if abs(np.linalg.det(M)) < 1e-6: return 0.0
             t, s = np.linalg.solve(M, -ov)
-            if th > math.radians(150):                     # nearly in line with the neighbour (a C=O off a cage's sharp
+            if th > math.radians(self.INLINE):             # nearly in line with the neighbour (a C=O off a cage's sharp
                 e = perp(v) * np.sign(cross(v, ov)) * st.lw / 2       # angle): stop where the line enters the
                 try: t = float(np.linalg.solve(M, e - ov)[0])         # neighbour's edge, not its centre line,
                 except np.linalg.LinAlgError: pass                    # or a sliver of it runs on outside
@@ -1257,14 +1259,14 @@ class _SceneBuild:
         LBL_SHOW, as ligate() spaces its ligands (the bond becomes free, longer by design; a bond already drawn longer
         is lengthened only if a superscript still leaves a stub: Ni^III-Ar). A ring bond keeps its place."""
         st = self.st; need = self.LBL_SHOW * st.bond / 14.4
-        arrowed = {y.uid for c in self.curlies for x in (c.src, c.dst) for y in self._xatoms(x)}   # a reacting atom stays
-        others = [x for mm in (self._ctx or [m]) for x in mm.atoms if not x.hidden]               # where its helper put it
+        others = [x for mm in (self._ctx or [m]) for x in mm.atoms if not x.hidden]   # (a reacting atom moves too, before its
+                                                                                       # arrows are placed: every O-H alike)
         moves = {}                                         # centre -> [(label, bond, unit vector, extra length)]
         for b in m.bonds:
             if getattr(b, "_lig", None) is not None or b.style in ("dative", "partial") or getattr(b.a, "_tmpl", None): continue
             if not (b.a.drawn and b.b.drawn) or b.a.hidden or b.b.hidden or not (b.a._g and b.b._g): continue
             for X, Y in ((b.b, b.a), (b.a, b.b)):          # the end with no other bond moves (of H-Cl alone, the second)
-                if len(m.nbrs(X)) != 1 or X.clear is not None or X.uid in arrowed: continue
+                if len(m.nbrs(X)) != 1 or X.clear is not None: continue
                 u = unit(self.P(X) - self.P(Y)); D = norm(self.P(X) - self.P(Y))
                 vis = D - self._exit(Y, u) - self._exit(X, -u)
                 nd = self.LBL_SHOW_STEREO * st.bond / 14.4 if b.style in ("wedge", "hash") else need

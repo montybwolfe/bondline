@@ -5,13 +5,13 @@ validate: OK
 validate: OK
 validate: OK
 continuity: OK
-(np.float64(428.1361997826103), np.float64(166.51243599514518))
+(np.float64(426.8298135831655), np.float64(166.51243599514518))
 check: OK
 notes (deliberate near reacting centres? confirm):
   bond angle at Atom(C:C5) is 130 deg (use 120 or 180)
   arrows: 14, shortest shaft 0.80 BU, smallest sweep 47 deg, all >= 0.8 BU and >= 25 deg: True
   structures off their row's arrow line: at most 0.00 pt
   base to H: 2.00 BU (rule 2.0)
-  O- to water H: 2.00 BU (rule 2.0)
+  O- to water H: 1.86 BU (rule 2.0)
   base to H: 2.00 BU (rule 2.0)
   product: cyclohex-2-enone | by-product: OH -1

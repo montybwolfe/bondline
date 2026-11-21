@@ -2,7 +2,7 @@
 H at 300 deg, Me at 240 deg
 validate: OK
 balance: OK
-(np.float64(182.72653127294151), np.float64(75.92653880119768))
+(np.float64(183.71637502294152), np.float64(75.92653880119768))
 check: OK
 == lone ions: spare pairs on the axes, a one-unit label's charge after it, a radical by its atom
 (np.float64(271.5386569249842), np.float64(24.73123146066941))

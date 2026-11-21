@@ -1,7 +1,7 @@
 {
   "name": "bondline",
   "displayName": "bondline",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A natural-language chemistry engine for Claude: structures, curly-arrow mechanisms, reaction schemes and catalytic cycles, checked before they're drawn.",
   "author": {
     "name": "Monty Wolfe",

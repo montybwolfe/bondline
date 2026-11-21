@@ -1,5 +1,5 @@
 == LDA drawn over the arrow, conditions under it; an aldehyde electrophile over the next arrow
-(np.float64(366.2329718149377), np.float64(94.18803125000001))
+(np.float64(366.2329718149377), np.float64(94.176))
 check: OK
 balance: gained C3H6O
 == arrow kinds: <- (with B:⊖ in text), -/-> (does not happen), <= (retrosynthesis, pointing left)

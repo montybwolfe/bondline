@@ -1,4 +1,4 @@
-(np.float64(224.6913445079837), np.float64(51.2523040461086))
+(np.float64(224.6913445079837), np.float64(51.2402727961086))
 check: OK
 arrow len pt 37.440000000000005 text widths [np.float64(136.90828125000002), np.float64(69.11078125)]
 captioned mol centre y 4.440892098500626e-16 arrow y 0.0 uncaptioned mol centre y 4.440892098500626e-16

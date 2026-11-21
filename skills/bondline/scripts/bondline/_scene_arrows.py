@@ -421,12 +421,73 @@ class _SceneArrows:
             K = [{"T": T, "P": P, "d": d, "pts": T + (P - d * self.st.c_head_len - T) * np.linspace(0, 1, 26)[:, None], "sw": 0.0,
                   "R": np.inf, "L": norm(P - T), "dep": 0.0, "aim": 0.0, "ccw": True, "ti": {}}]
         extra = lambda K: self._extra(c, cls, K)
-        if len(K) > 150 or quick:
-            V, cost = self._arrow_eval(c, K, O, p, wshape, coarse=True); cost = cost + extra(K)
-            K = [K[i] for i in np.lexsort((cost, V > 0.05))[:(1 if quick else 150)]]
-        V, cost = self._arrow_eval(c, K, O, p, wshape); feas = V <= 0.05; pen = extra(K)
-        i = int(np.argmin(np.where(feas, cost + pen, np.inf))) if feas.any() else int(np.argmin(4.0 * V + cost))
-        self._finish(c, K[i]); c._class = cls; c._ok = bool(feas.any()); c._V = float(V[i])
+        def best(K):
+            if len(K) > 150 or quick:
+                V, cost = self._arrow_eval(c, K, O, p, wshape, coarse=True); cost = cost + extra(K)
+                K = [K[i] for i in np.lexsort((cost, V > 0.05))[:(1 if quick else 150)]]
+            V, cost = self._arrow_eval(c, K, O, p, wshape); feas = V <= 0.05; pen = extra(K)
+            i = int(np.argmin(np.where(feas, cost + pen, np.inf))) if feas.any() else int(np.argmin(4.0 * V + cost))
+            return K[i], bool(feas.any()), float(V[i]), float(cost[i])
+        k, ok, v, cs = best(K)
+        if not ok:                                             # no arc gets past the ink: a freer, hand-drawn curve
+            F = self._free_cands(c)
+            if F:
+                k2, ok2, v2, cs2 = best(F)
+                if ok2 or 4.0 * v2 + cs2 < 4.0 * v + cs: k, ok, v = k2, ok2, v2
+        self._finish(c, k); c._class = cls; c._ok = ok; c._V = v
+    FREE_DEP = {"lp": (0, 8, -8, 15, -15),    "bond": (0, 25, -25, 50, -50), "atom": (0, 30, -30, 60, -60, 90, -90)}
+    FREE_HANDLE = (0.3, 0.55, 0.85)   # handle lengths of a free curve, as fractions of its chord
+    def _free_cands(self, c):
+        """Candidate arrows beyond arcs and joined arcs, for an arrow none of those can draw without touching or
+        crossing ink: smooth cubic curves from the same tails to the same tips, leaving the tail in a wider fan of
+        directions and coming into the head with long or short handles, so the shaft can swing out round a bond or a
+        label and come back in the way a hand-drawn arrow does. Only curves that bend one way (no S), turn between 25
+        and 270 deg and nowhere more tightly than the arcs may are kept. Same fields as _arrow_cands' candidates."""
+        st = self.st; h = st.c_head_len; cd = self._edst(c); dpt = self._pt(cd)
+        tgt = (cd,) if isinstance(cd, Atom) else (cd.a, cd.b) if isinstance(cd, Mid) else tuple(cd) if isinstance(cd, (tuple, list)) else ()
+        tails = self._tails(c.src, dpt, tgt)
+        tips = self._tips(cd, tails[0][0] if tails else dpt, wide=isinstance(cd, Mid) and not self._concerted(c))
+        force = None if c.side is None else (1 if c.side == "left" else -1)
+        rk = lambda v: None if v is None else np.asarray(v, float).tobytes()
+        key = (force, h, tuple((rk(T), rk(u0), sorted(ti)) for T, u0, ti in tails),
+               tuple((rk(P), tuple((rk(d), a_) for d, a_ in hd)) for P, hd, pi in tips))
+        if getattr(c, "_free", None) is not None and c._free[0] == key: return c._free[1]   # (the same inputs: reuse)
+        rmin, lmin = 0.15 * st.bond, 0.22 * st.bond; n = 26
+        t = np.linspace(0.0, 1.0, n)[:, None]; tf = np.linspace(0.0, 1.0, 90)[:, None]
+        bz = lambda C0, C1, C2, C3, t: ((1 - t) ** 3) * C0 + 3 * ((1 - t) ** 2) * t * C1 + 3 * (1 - t) * t * t * C2 + (t ** 3) * C3
+        out = []
+        for T, u0, ti in tails:
+            kind = "lp" if "lp" in ti else "bond" if "bond" in ti else "atom"
+            dirs = [(rotv(u0, r), float(abs(r))) for r in self.FREE_DEP[kind]] if u0 is not None else \
+                   [(dirv(a_), 0.0) for a_ in range(0, 360, 30)]
+            for P, hd, pi in tips:
+                for d, aim in hd:
+                    B = P - d * h; L = norm(B - T)
+                    if L < lmin: continue
+                    for t0, dep in dirs:
+                        for fa in self.FREE_HANDLE:
+                            for fb in self.FREE_HANDLE:
+                                C1, C2 = T + t0 * fa * L, B - d * fb * L
+                                Q = bz(T, C1, C2, B, t); D = np.diff(Q, axis=0); sl = np.hypot(D[:, 0], D[:, 1])
+                                if sl.min() < 1e-6: continue
+                                tu = D / sl[:, None]; tu = np.vstack([t0[None], tu, d[None]])
+                                cr = tu[:-1, 0] * tu[1:, 1] - tu[:-1, 1] * tu[1:, 0]; dt = tu[:-1, 0] * tu[1:, 0] + tu[:-1, 1] * tu[1:, 1]
+                                turn = np.arctan2(cr, dt)
+                                if (turn > 0.01).any() and (turn < -0.01).any(): continue          # an S: never
+                                sw = float(np.degrees(abs(turn.sum())))
+                                if not 25.0 <= sw <= 270.0: continue
+                                seg = np.concatenate([[sl[0]], (sl[:-1] + sl[1:]) / 2, [sl[-1]]])
+                                curv = np.abs(turn) / np.maximum(seg, 1e-9)
+                                R = float(1.0 / curv.max()) if curv.max() > 1e-12 else math.inf
+                                if R < rmin: continue
+                                Rx = float(1.0 / max(curv.min(), 1e-12))
+                                ccw = bool(turn.sum() > 0)
+                                out.append({"T": T, "P": P, "d": d, "sw": sw, "R": R, "L": float(sl.sum()) + h, "dep": dep,
+                                            "aim": aim, "ccw": ccw, "ti": ti, "bi": False, "even": min(1.0, R / Rx) if math.isfinite(Rx) else 0.0,
+                                            "pts": Q, "fine": bz(T, C1, C2, B, tf)})
+        out = self._side_filter(out, force)
+        c._free = (key, out)
+        return out
     def _extra(self, c, cls, K):
         """Shape rules on top of the ranking: arrows that start and end close together (adj, lpadj, hook) want a
         shaft of 0.8 BU (two head lengths), so they never read as all head; the shortfall is weighed against the other
@@ -626,7 +687,7 @@ class _SceneArrows:
         cache[key] = (sig, ref, [{k: getattr(c, k) for k in keys} for c in curlies])
     def _finish(self, c, k):
         st = self.st; h = st.c_head_len; T, P, d = k["T"], k["P"], k["d"]; B = P - d * h
-        pts = self._biarc_pts(T, B, k["par"], 90) if k.get("bi") else (self._arc_pts(T, B, k["par"], 90) if "par" in k else k["pts"])
+        pts = self._biarc_pts(T, B, k["par"], 90) if k.get("bi") else (self._arc_pts(T, B, k["par"], 90) if "par" in k else k.get("fine", k["pts"]))
         sb = -1 if k["ccw"] else 1                               # fishhook barb on the outside of the curve
         c._head = self._head_poly(P, d, c.kind, sb)
         c._pts = np.vstack([pts, P - d * (0.8 if c.kind == "full" else 0.65) * h])          # the shaft ends inside the head

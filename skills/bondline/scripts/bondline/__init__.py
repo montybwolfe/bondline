@@ -3,11 +3,11 @@
 Molecule coordinates are in bond lengths (BU). Everything renders at one fixed physical
 scale set by Style.bond (pt per bond), so every figure drawn with the same Style matches.
 """
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 from ._core import *  # noqa: F401,F403
 from ._scene_build import _SceneBuild
 from ._scene_arrows import _SceneArrows
-from ._scene_finish import _SceneFinish
+from ._scene_finish import _SceneFinish, side_by_side  # noqa: F401 (kept out of _core for its size)
 
 
 class Scene(_SceneBuild, _SceneArrows, _SceneFinish):

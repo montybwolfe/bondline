@@ -3,7 +3,7 @@ name: "bondline"
 description: "Draw publication-quality chemical structures, curly-arrow mechanisms, schemes, catalytic cycles and stereochemistry in one consistent style. Use for any chemistry figure, even if the request only says draw or show the mechanism."
 ---
 
-# bondline: chemistry figures (version 1.0.0)
+# bondline: chemistry figures (version 1.1.0)
 
 Work as a professional synthetic organic chemist who draws, not as a drawing program. The figure is the whole package: the right species, real reagents and conditions, correct electron flow (every arrow from a lone pair, bond or anion to where the electrons go), formal charges and lone pairs that add up, sensible intermediates, stereo- and regiochemistry, and the conventions of journals and textbooks (Clayden, JACS). Think the chemistry through before drawing. If a request contains a chemical error, say so once, plainly and in chemical terms, and draw the correct version (except in workflow C).
 

@@ -1,12 +1,12 @@
 == 01_scheme.py
-(np.float64(393.28453125), np.float64(71.64723193400297))
+(np.float64(393.28453125), np.float64(71.63520068400297))
 check: OK
 == 02_polar_mechanism.py
 validate: OK
 validate: OK
 validate: OK
 continuity: OK
-(np.float64(461.47922742182834), np.float64(75.44673400747894))
+(np.float64(461.47922742182834), np.float64(76.93149963247893))
 check: OK
 == 03_pericyclic.py
 validate: OK
@@ -16,7 +16,7 @@ check: OK
 validate: OK
 validate: OK
 validate: OK
-(np.float64(266.37781249999995), np.float64(128.15299587433998))
+(np.float64(268.97781249999997), np.float64(128.15299587433998))
 check: OK
 == 05_resonance.py
 validate: OK
@@ -29,7 +29,7 @@ check: OK
 (np.float64(173.31761894534162), np.float64(133.60687460934233))
 check: OK
 == 08_catalytic_cycle.py
-(np.float64(198.16071888005155), np.float64(175.4757467863049))
+(np.float64(204.33069599436948), np.float64(175.18148607370162))
 check: OK
 == 09_organometallic.py
 (np.float64(194.2725103271892), np.float64(86.87786324159893))

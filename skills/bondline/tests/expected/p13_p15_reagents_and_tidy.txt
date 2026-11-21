@@ -8,8 +8,8 @@
   NEt3 : 270 deg from H, 2.00 BU; base arrow sweep 29; issues 0
 == acid catalysis: hydronium protonates a ketone where the new O-H will point
 check: OK
-  #0 inter sweep  70  shaft 0.96 BU
-  #1 hook  sweep 200  shaft 1.31 BU
+  #0 inter sweep  72  shaft 0.82 BU
+  #1 hook  sweep 180  shaft 1.27 BU
 == stock reagents
    OH- key OH
    O- H key O

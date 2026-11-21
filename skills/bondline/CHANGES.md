@@ -1,5 +1,37 @@
 # bondline changes
 
+## 1.1.0
+
+### Fixes
+
+- Bonds between two labels (O–H, H–Cl) show the same length everywhere. An O–H that a curly arrow starts or ends on
+  used to keep its short default stub, so the two O–H bonds of one water could differ.
+- At a centred double bond (a ketone's C=O, an isopropenyl's C=CH₂), the neighbouring bonds stop at its near line,
+  even when one of them is almost in line with it. Previously a C=CH₂ didn't trim them at all and a wide-angled C=O
+  didn't either, so a stub of the neighbour poked into the gap between the two lines.
+- A double bond beside the wide end of a hash is drawn offset, as beside a wedge, so its line no longer runs into the
+  last hash bar.
+- The + and − of text (H⁺, Na⁺, superscript charges) carry the same bar weight as the signs in circled charges. The
+  font's own superscript plus was about half the weight of a letter's stem. A sign followed by a space, the minus of
+  "a − b" in an exponent, is an operator and keeps the font's weight.
+- In PNGs every run of text starts on a whole pixel, so the same letter is rendered with identical pixels wherever it
+  stands. Two L ligands, or the H of two "H⁺ transfer" labels, could look like different weights before.
+
+### Curly arrows
+
+- When no single or joined arc can reach its target without touching or crossing a bond or label, the arrow is drawn
+  as a free curve instead: a smooth one-way bend that leaves its source over a wider fan of directions and swings
+  round whatever is in the way. Arrows that fit as arcs are unchanged.
+
+### Examples
+
+- The README's Suzuki cycle uses PPh₃ ligands, and there's a new ferrocene and acetylferrocene scheme.
+
+### Style decisions
+
+- Signs in text are drawn at the charge marks' weight (0.79 pt by default) rather than the font's, so a superscript
+  plus is a little heavier than in ChemDraw.
+
 ## 1.0.0
 
 First release.

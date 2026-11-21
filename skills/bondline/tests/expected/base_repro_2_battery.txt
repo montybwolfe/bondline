@@ -20,16 +20,15 @@ validate: OK
 (np.float64(275.65870041678926), np.float64(61.33200368306986))
 check: OK
 ===== add
-(np.float64(60.277797064495914), np.float64(58.28125))
-check:
-  bond Atom(CH3:Nu)-Atom(MgBr:Mg) between two labels shows only 1.3 pt; lengthen it (length=1.3, free=True) or write one condensed label
+(np.float64(65.00279706449592), np.float64(58.28125))
+check: OK
 ===== da
 validate: OK
 (np.float64(114.38706325798368), np.float64(42.21980804848572))
 check: OK
 ===== radical
 validate: OK
-(np.float64(191.08562500000002), np.float64(29.40542703948089))
+(np.float64(191.08562500000002), np.float64(29.29954864475075))
 check:
   mol1: bond Atom(H:H)-Atom(Cl:Cl) length 2.20 BU: to connect two fragments use join(), which lays the new bond out at 1 BU (flag free=True if intended)
   Atom(CH3:C) sits 1.00 BU from Atom(H:H) but no bond or curly arrow joins them (split() a departing group off as its own item, or keep it with its arrow)
@@ -41,7 +40,7 @@ check: OK
 check: OK
 ===== ester
 validate: OK
-(np.float64(145.16211908859648), np.float64(121.78264774362407))
+(np.float64(145.16211908859648), np.float64(124.78108524362408))
 check:
   bond angle at Atom(O:Om) is 90 deg (use 120 or 180)
 notes (deliberate near reacting centres? confirm):

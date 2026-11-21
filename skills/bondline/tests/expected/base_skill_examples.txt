@@ -4,7 +4,7 @@ stereo: Atom(C:3)=S
 check: OK
 == lactone protonation
 validate: OK
-(np.float64(177.22041332775328), np.float64(98.29461654610859))
+(np.float64(178.93487299430777), np.float64(98.78953842110857))
 check: OK
 notes (deliberate near reacting centres? confirm):
   explicit H on Atom(O:Oc) with no arrow on it: fold it into the label (Mol.tidy()) unless it is shown on purpose

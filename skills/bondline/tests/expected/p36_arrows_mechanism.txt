@@ -5,7 +5,7 @@ validate: OK
 check: OK
 SN2: HO- at 165 deg (Br at 0, Et at 200: the straight run in clears Et)
 hydride shift: shift | tail on the C1 side: True | curls over the top: True | methyl shift: shift | E1: shift
-(np.float64(258.61996912899184), np.float64(57.6320485364085))
+(np.float64(258.61996912899184), np.float64(58.43900376328142))
 check: OK
 hook on CHCl3: hook | lands between H and the upper Cl: True | O-H hooks: charges outside the loops: [True, True] | same place in both copies: True
 (np.float64(102.16434412899184), np.float64(39.42918026543833))
