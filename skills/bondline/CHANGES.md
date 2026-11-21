@@ -19,7 +19,8 @@
   L ligands, a bonded H beside the H of H₃PO₄). Each run of text also starts on a whole pixel, so a letter is drawn
   with identical pixels wherever it stands.
 - An orbital lobe drawn on a labelled atom (the p orbital of a C=O's oxygen) is shaded right up to the letter. A thin
-  white line used to separate the shading from the letter.
+  white line used to separate the shading from the letter. An orbital's name (`label=`) stands 3 pt clear of its
+  lobe instead of 1.5 pt.
 - Rows of a scheme (`flow()`, `row(under=)`) sit 1.3 BU apart instead of 0.9, so captions no longer crowd the
   conditions of the row below.
 

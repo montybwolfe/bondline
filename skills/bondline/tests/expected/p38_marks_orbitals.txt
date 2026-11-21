@@ -42,7 +42,7 @@ locants inside a ring: [2, 6]
 check: OK
 Nu pair clear of its letters: 1.8 pt; carbene pair at 0 deg (its lobe at 0)
 == orbitals: s spheres show their phase (bonds stop at them), a hybrid has its back lobe where no bond runs, an orbital can carry its name
-(np.float64(179.61001394459487), np.float64(58.711808887759986))
+(np.float64(179.61001394459487), np.float64(60.211808887759986))
 check: OK
 lobes drawn: [1, 1, 1, 2] fills: ['#B8B8B8', 'white']
 == a floating substituent across a ring edge; the wiggly line of a disconnection and of an attachment point

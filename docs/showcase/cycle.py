@@ -17,7 +17,7 @@ tm, p2 = anisyl_pd(); ph3(tm, tm.ligate(p2, "sqpl", length=2.5, E="P", S="P"), {
 ph = from_smiles("c1ccccc1"); ipso = ph.atoms[0]; tm.merge(ph); tm.join(p2, ipso, angle=90)
 pd0 = Mol(); p = pd0.atom("Pd^0", (0, 0)); ph3(pd0, pd0.ligate(p, "lin", length=1.5, E="P", W="P"))
 c = S.cycle([(pd0, 90), (oa, -30), (tm, 210)], radius=8)
-S.branch(c, 0, from_smiles("COc1ccc(Br)cc1"), kind="in"); S.branch(c, 1, "PhB(OH)_2, K_2CO_3", kind="in")
+S.branch(c, 0, from_smiles("COc1ccc(Br)cc1"), kind="in"); S.branch(c, 1, from_smiles("OB(O)c1ccccc1", align=(3, 1, 90)), kind="in", at=0.35); S.branch(c, 1, "K_2CO_3", kind="in", at=0.65)
 S.branch(c, 2, from_smiles("COc1ccc(cc1)c1ccccc1"), kind="out")
 S.branch(c, 0, "oxidative\naddition", kind="step"); S.branch(c, 1, "transmetallation", kind="step", side="in")
 S.branch(c, 2, "reductive\nelimination", kind="step")
